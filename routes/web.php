@@ -48,6 +48,5 @@ Route::post('/update/{id}',[StudentController::class,'update']);
 Route::post('/store', [StudentController::class,'store']);
 
 
-// auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+auth::routes();
+Route::get('/home', [HomeController::class, 'index'])->name('home');
