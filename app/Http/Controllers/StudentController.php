@@ -38,10 +38,7 @@ public function table()
     // return view('showstudent',compact('student'));
     return view("webpages.table",compact('student'));
 }
-public function editstudentform() {
-        // $student=Student::find($id);
-        return view("webpages.editstudentform");
-}
+
 
 
 public function gellery() 
@@ -71,7 +68,6 @@ public function gellery()
         $request->validate([
             'name'=>'required',
             'roll'=>'required | numeric',
-            
              'technology'=>'required',
             
             'photo'=>'nullable|mimes:jpg,jpeg,png|max:15512'
@@ -141,15 +137,19 @@ public function gellery()
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     public function editstudentform($id) {
+        $student=Student::find($id);
+        return view("webpages.editstudentform",compact('student'));
+}
+
     public function update(Request $request, $id)
     {
         //
         $request->validate([
             'name'=>'required',
             'roll'=>'required|numeric',
-       
-             'technology'=>'required',
-            	 	 	 	 	 		
+             'technology'=>'required',	 	 	 		
             
 
 

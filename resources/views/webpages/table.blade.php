@@ -108,6 +108,15 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ratione voluptatem doloremque, nam rerum in impedit tempore molestias adipisci dolores veniam deserunt repellendus accusantium provident, recusandae aliquam hic fugit optio?</p>
         </div>
         <hr>
+            @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+      </div><br />
+    @endif
 <div>
     <table class="table text-center table-borderless" data-aos="zoom-in-up">
         <tr>
@@ -121,18 +130,6 @@
             <th>Group Section</th>
             <th colspan="2">action</th>
         </tr>
-        <tr>
-            <td><img src="{{ asset("/image/1.jpg")}}" alt="photo" height="50" width="50"></td>
-            <td>Iftekher Mahmud</td>
-            <td>122364</td>
-            <td>parvez@gmail.com</td>
-            <td>Computer Science</td>
-            <td>Seventh</td>
-            <td>First Shift</td>
-            <td>Section B</td>
-            <td></td>
-            <td></td>
-        </tr>
         @foreach ($student as $students)
         <tr>
             <td><img src="{{ asset('/upload/student')}}/{{$students->photo }}" alt="photo" height="50" width="50"></td>
@@ -143,8 +140,8 @@
             <td>{{ $students->semister }}</td>
             <td>{{ $students->shift }}</td>
             <td>{{ $students->group }}</td>
-            <td><a href="{{url('/editstudentform')}}"><i class="fa-solid fa-pen-to-square"></a></i></td>
-            <td><i class="fa-solid fa-trash"></i></td>
+            <td><a href="{{url('editstudentform',$students->id)}}"><i class="fa-solid fa-pen-to-square"></a></i></td>
+            <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
         </tr>
 
         @endforeach

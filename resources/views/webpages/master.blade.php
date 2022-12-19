@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iftekher mahmud website</title>
-  <link rel="stylesheet" href="custom/style.css">
+  <link rel="stylesheet" href="{{asset('custom/style.css')}}">
   <link href="{{asset ('css/bootstrap.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- aos entry animation libary -->
@@ -19,7 +19,7 @@
   <!-- ======================================navigation menu bar here====================================== -->
   <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="rounded-circle" src=" image/iftekher.jpg" alt="website logo"
+      <a class="navbar-brand" href="#"><img class="rounded-circle" src=" {{asset('image/iftekher.jpg')}}" alt="website logo"
           height="50" width="50"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -157,7 +157,7 @@
   
     </div>
     <!-- ==========================================contrainer here===================================== -->
-    <a href="#home"><img src="image/up.svg" class="arrow" alt="arrow"></a>
+    <a href="#home"><img src="{{asset('image/up.svg')}}" class="arrow" alt="arrow"></a>
   
     <script src="{{ asset ("js/bootstrap.min.js") }}"></script>
     <script src="{{ asset ('js/bootstrap.bundle.min.js') }}"></script>

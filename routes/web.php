@@ -43,7 +43,7 @@ use resources\views\auth;
 Route::get('/',[StudentController::class,'homepage']);
 Route::get('/table',[StudentController::class,'table']);
 Route::get('/addstudentform',[StudentController::class,'addstudentform']);
-Route::get('/editstudentform{id}',[StudentController::class,'editstudentform']);
+Route::get('/editstudentform/{id}',[StudentController::class,'editstudentform']);
 Route::post('/update/{id}',[StudentController::class,'update']);
 Route::post('/store', [StudentController::class,'store']);
 
