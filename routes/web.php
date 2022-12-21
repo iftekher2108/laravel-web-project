@@ -4,7 +4,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
-use resources\views\auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,5 +47,7 @@ Route::post('/update/{id}',[StudentController::class,'update']);
 Route::post('/store', [StudentController::class,'store']);
 
 
-auth::routes();
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
