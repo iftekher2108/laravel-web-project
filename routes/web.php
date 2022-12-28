@@ -38,13 +38,35 @@ use Illuminate\Support\Facades\Route;
 //     return view('webpages.table');
 // });
 
-
+// pages route link start here 
 Route::get('/',[StudentController::class,'homepage']);
+Route::get('/gellery',[StudentController::class,'gellery']);
+Route::get('/blog',[StudentController::class,'blog']);
+Route::get('/about',[StudentController::class,'about']);
+Route::get('/policy',[StudentController::class,'policy']);
 Route::get('/table',[StudentController::class,'table']);
+// pages route link end here
+
+
+// student data management start here 
 Route::get('/addstudentform',[StudentController::class,'addstudentform']);
 Route::get('/editstudentform/{id}',[StudentController::class,'editstudentform']);
 Route::post('/update/{id}',[StudentController::class,'update']);
 Route::post('/store', [StudentController::class,'store']);
+Route::get('/destroy/{id}',[StudentController::class,'destroy']);
+
+
+// student data management end here
+
+
+// teacher data management start here
+
+
+// teacher data management end here
+
+
+
+
 
 
 

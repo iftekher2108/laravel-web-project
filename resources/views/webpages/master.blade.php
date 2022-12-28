@@ -44,15 +44,6 @@
             <a class="nav-link" href="{{url('policy')}}">private policy</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="teacher.html">Teacher</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="student.html">student</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('addstudentform')}}">addstudentform</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="{{url('table')}}">table</a>
           </li>
         </ul>

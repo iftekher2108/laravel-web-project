@@ -307,7 +307,7 @@
 
     </div>
     <!-- ==========================================contrainer here===================================== -->
-    <a class="arrow" href="#home"><img src="image/up.svg" class="arrow" alt="arrow"></a>
+    <a class="arrow rounded-4" href="#home"><img src="image/up.svg" class="arrow" alt="arrow"></a>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="popper/popper.min.js"></script>

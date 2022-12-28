@@ -603,7 +603,10 @@ table {
   color: snow !important;
   outline: none;
   border: none;
-  overflow-x: auto;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+
 }
 table tr th {
   background: var(--color-2) !important;
@@ -618,6 +621,10 @@ table tr {
 }
 table tr:hover {
   background: #435197 !important;
+}
+#table-wrapper {
+  overflow: scroll;
+
 }
 
 /* ======================================table page===================== */

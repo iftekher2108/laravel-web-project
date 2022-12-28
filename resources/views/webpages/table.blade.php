@@ -46,15 +46,6 @@
             <a class="nav-link" href="{{url('policy')}}">private policy</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="teacher.html">Teacher</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="student.html">student</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('addstudentform')}}">Form</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link active" href="{{url('table')}}">table</a>
           </li>
         </ul>
@@ -107,6 +98,7 @@
     <h1 style=" text-decoration: underline;">Student Information Is Here.</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ratione voluptatem doloremque, nam rerum in impedit tempore molestias adipisci dolores veniam deserunt repellendus accusantium provident, recusandae aliquam hic fugit optio?</p>
         </div>
+        <a href="{{url('addstudentform')}}" class="nav-link m-3"><button class="btn btn-success px-5 py-2">Add Student</button></a>
         <hr>
             @if ($errors->any())
       <div class="alert alert-danger">
@@ -117,7 +109,10 @@
         </ul>
       </div><br />
     @endif
-<div>
+
+    <h1>Total Student: {{ count($student) }} </h1>
+    <hr>
+    <div id="table-wrapper">
     <table class="table text-center table-borderless" data-aos="zoom-in-up">
         <tr>
             <th>Photo</th>
@@ -130,9 +125,13 @@
             <th>Group Section</th>
             <th colspan="2">action</th>
         </tr>
+
+
+            
         @foreach ($student as $students)
+
         <tr>
-            <td><img src="{{ asset('/upload/student')}}/{{$students->photo }}" alt="photo" height="50" width="50"></td>
+            <td><img class="rounded-circle" src="{{ asset('/upload/student')}}/{{$students->photo }}" alt="photo" height="50" width="50"></td>
             <td>{{ $students->name }}</td>
             <td>{{ $students ->roll }}</td>
             <td>{{ $students->email }}</td>
@@ -141,7 +140,7 @@
             <td>{{ $students->shift }}</td>
             <td>{{ $students->group }}</td>
             <td><a href="{{url('editstudentform',$students->id)}}"><i class="fa-solid fa-pen-to-square"></a></i></td>
-            <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
+            <td><a href="{{ url('destroy',$students->id) }}"><i class="fa-solid fa-trash"></i></a></td>
         </tr>
 
         @endforeach
@@ -210,7 +209,8 @@
         </tr> --}}
 
       </table>
-</div>
+    </div>
+
 
 <h3 style=" text-decoration: underline;">Lorem ipsum dolor sit amet.</h3>
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad animi laudantium, fugiat cumque praesentium ex vitae eum! Deleniti eum ab, aut optio eius assumenda temporibus ex error. Iste, hic.</p>

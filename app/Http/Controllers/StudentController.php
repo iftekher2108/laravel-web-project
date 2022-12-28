@@ -22,28 +22,23 @@ public function homepage()
     return view("webpages.index");
 }
 
+public function gellery() 
+{
+    return view("webpages.gellery");
+}
+
+public function blog() 
+{
+    return view("webpages.blog");
+}
+
 public function about() 
 {
     return view("webpages.about");
 }
-public function addstudentform()
-{
-    return view("webpages.addstudentform");
-}
 
-public function table() 
-{
-    $student=Student::all(); //Model
-      
-    // return view('showstudent',compact('student'));
-    return view("webpages.table",compact('student'));
-}
-
-
-
-public function gellery() 
-{
-    return view("webpages.gellery");
+public function policy() {
+    return view("webpages.policy");
 }
     /**
      * Show the form for creating a new resource.
@@ -61,6 +56,11 @@ public function gellery()
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function addstudentform()
+    {
+        return view("webpages.addstudentform");
+    }
+
     public function store(Request $request)
     {
         //
@@ -68,7 +68,11 @@ public function gellery()
         $request->validate([
             'name'=>'required',
             'roll'=>'required | numeric',
+            'email'=>'required',
              'technology'=>'required',
+             'semister'=>'required',
+             'shift'=>'required',
+             'group'=>'required',	
             
             'photo'=>'nullable|mimes:jpg,jpeg,png|max:15512'
         ]);
@@ -137,6 +141,12 @@ public function gellery()
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function table() 
+    {
+        $student=Student::all(); //Model
+          
+        return view("webpages.table",compact('student'));
+    }
 
      public function editstudentform($id) {
         $student=Student::find($id);
@@ -149,8 +159,12 @@ public function gellery()
         $request->validate([
             'name'=>'required',
             'roll'=>'required|numeric',
-             'technology'=>'required',	 	 	 		
-            
+            'email'=>'required',
+             'technology'=>'required',
+             'semister'=>'required',
+             'shift'=>'required',
+             'group'=>'required',	 	 	 		
+
 
 
             'photo'=>'nullable|mimes:jpg,jpeg,png|max:15512'
@@ -172,7 +186,9 @@ public function gellery()
         $student->roll = $request->roll;
        $student->name = $request->name;
         $student->technology = $request->technology;
-       
+        $student->semister = $request->semister;
+       $student->shift=$request->shift;
+       $student->group=$request->group;
        
         $student->save();
         return redirect('/table');
@@ -188,5 +204,11 @@ public function gellery()
     public function destroy($id)
     {
         //
+        $student = Student::find($id);
+        if($student->photo != '' && file_exists(public_path('student/upload'.$student->photo))) {
+            unlink(public_path('student/upload'.$student->photo));
+        }
+        $student->delete();
+        return redirect('table');
     }
 }
