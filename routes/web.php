@@ -72,4 +72,5 @@ Route::get('/destroy/{id}',[StudentController::class,'destroy']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route:: get('/accountsetting',[HomeController::class,'accountsetting'])->name('accountsetting');
