@@ -49,7 +49,10 @@ public function policy() {
     {
         //
     }
-
+public function studentprofile($id) {
+    $student=Student::find($id);
+    return view("webpages.studentprofile",compact('student'));
+}
     /**
      * Store a newly created resource in storage.
      *
@@ -185,6 +188,7 @@ public function policy() {
         
         $student->roll = $request->roll;
        $student->name = $request->name;
+       $student->email =$request->email;
         $student->technology = $request->technology;
         $student->semister = $request->semister;
        $student->shift=$request->shift;

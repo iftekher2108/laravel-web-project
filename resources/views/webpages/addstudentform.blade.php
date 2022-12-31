@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -62,15 +62,15 @@
     </nav>
     <!-- =========================================navigation menu bar here========================================= -->
     <!-- ==========================================body contrainer here================================= -->
-    <div class="container-fluid">
+    <div class="container-fluid"> --}}
         <!-- ====================================home front section here============================= -->
 
-
+@extends('webpages.master')
+@section('content')
 
 
         <!-- ============================================home front section here=================================== -->
         <hr>
-
         <!-- ================================================trainer and mentor colomn with icon here================================== -->
 <div class="suraiya text-center p-3 rounded-4" data-aos="zoom-in">
 <h1 class="text-uppercase" style=" text-decoration: underline;">Lorem ipsum dolor sit amet.</h1>
@@ -190,7 +190,7 @@
 
 
 
-
+@endsection
 
 
 
@@ -202,7 +202,7 @@
 
 
         <!-- =============================================footer bar============================================== -->
-
+{{-- 
         <div class="col">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark shadow-lg"
                 style="background-image: url('unsplash-photo-2.jpg');">
@@ -323,4 +323,4 @@
     </script>
 </body>
 
-</html>
+</html> --}}

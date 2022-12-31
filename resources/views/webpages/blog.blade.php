@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -63,7 +63,7 @@
     </nav>
     <!-- =========================================navigation menu bar here========================================= -->
     <!-- ==========================================body contrainer here================================= -->
-    <div class="container-fluid">
+    <div class="container-fluid"> --}}
         <!-- ====================================home front section here============================= -->
 
         <!-- ============================================home front section here=================================== -->
@@ -74,7 +74,8 @@
 
 
 
-
+@extends('webpages.master')
+@section('content')
 
 
 
@@ -372,7 +373,7 @@
 
 
 
-
+@endsection
 
 
         <!-- ========================================post code end here====================================== -->
@@ -409,7 +410,7 @@
 
 
         <!-- =============================================footer bar============================================== -->
-
+{{-- 
         <div class="col">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark shadow-lg"
                 style="background-image: url('unsplash-photo-2.jpg');">
@@ -530,4 +531,4 @@
   </script>
 </body>
 
-</html>
+</html> --}}

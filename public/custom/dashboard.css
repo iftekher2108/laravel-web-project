@@ -1,0 +1,48 @@
+
+.arrow {
+    background: #16b485;
+    padding:5px;
+    height: 40px;
+    width: 40px;
+    inset: auto 1.5rem 1.5rem auto;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #16b485;
+    animation: uparrow 1.5s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+    z-index: 5;
+  }
+  .arrow:hover {
+    background: #fff;
+    border: 2px solid #16b485;
+    border-radius: 15px;
+    animation: none;
+
+
+  }
+  .arrow svg {
+    fill: #fff !important;
+  }
+  .arrow:hover svg path {
+    fill: #16b485 !important;
+  }
+  
+@keyframes uparrow {
+    0% {
+      inset: auto 1.5rem 1.5rem auto;
+    }
+    20% {
+      inset: auto 1.5rem 2.3rem auto;
+    }
+    40% {
+      inset: auto 1.5rem 1.5rem auto;
+    }
+    60% {
+      inset: auto 1.5rem 1.9rem auto;
+    }
+    80%{
+      inset: auto 1.5rem 1.5rem auto;
+    }
+    100% {
+      inset: auto 1.5rem 1.7rem auto;
+    }
+  }

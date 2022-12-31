@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -54,10 +54,11 @@
     </nav>
     <!-- =========================================navigation menu bar here========================================= -->
     <!-- ==========================================body contrainer here================================= -->
-    <div class="container-fluid">
+    <div class="container-fluid"> --}}
         <!-- ====================================home front section here============================= -->
 
-
+@extends('webpages.master')
+@section('content')
 
 
         <!-- ============================================home front section here=================================== -->
@@ -111,6 +112,12 @@
     @endif
 
     <h1>Total Student: {{ count($student) }} </h1>
+    <span class="h4">total Computer Science student : {{ count($student->where('technology','Computer Science')) }} |</span>
+    <span class="h4">total Civil student : {{ count($student->where('technology','Civil')) }} |</span>
+    <span class="h4">total Power student : {{ count($student->where('technology','Power')) }} |</span>
+    <span class="h4">total Mechanical student : {{ count($student->where('technology','Mechanical')) }} |</span>
+    <span class="h4">total  Electrical student : {{ count($student->where('technology','Electrical')) }} |</span>
+    <span class="h4">total Electronics student : {{ count($student->where('technology','Electronics')) }} </span>
     <hr>
     <div id="table-wrapper">
     <table class="table text-center table-borderless" data-aos="zoom-in-up">
@@ -123,6 +130,7 @@
             <th>Semister</th>
             <th>Shift</th>
             <th>Group Section</th>
+            <th> detail</th>
             <th colspan="2">action</th>
         </tr>
 
@@ -139,8 +147,9 @@
             <td>{{ $students->semister }}</td>
             <td>{{ $students->shift }}</td>
             <td>{{ $students->group }}</td>
-            <td><a href="{{url('editstudentform',$students->id)}}"><i class="fa-solid fa-pen-to-square"></a></i></td>
-            <td><a href="{{ url('destroy',$students->id) }}"><i class="fa-solid fa-trash"></i></a></td>
+            <td><a href="{{ url('studentprofile',$students->id) }}"   class="nav-link"><button class="btn btn-success">View</button></a></td>
+            <td><a href="{{url('editstudentform',$students->id)}}" class="nav-link text-success"><i class="fa-solid fa-pen-to-square"></a></i></td>
+            <td><a href="{{ url('destroy',$students->id) }}" class="nav-link text-success"><i class="fa-solid fa-trash"></i></a></td>
         </tr>
 
         @endforeach
@@ -221,13 +230,13 @@
 
 
 
-
+@endsection
 
 
 
 
         <!-- =============================================footer bar============================================== -->
-
+{{-- 
         <div class="col">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark shadow-lg"
                 style="background-image: url('unsplash-photo-2.jpg');">
@@ -348,4 +357,4 @@
     </script>
 </body>
 
-</html>
+</html> --}}

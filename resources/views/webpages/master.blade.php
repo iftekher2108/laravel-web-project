@@ -18,7 +18,7 @@
 <body id="home">
   <!-- ======================================navigation menu bar here====================================== -->
   <nav class="navbar navbar-expand-lg bg-dark">
-    <div class="container-fluid">
+    <div class="container-fluid ">
       <a class="navbar-brand" href="#"><img class="rounded-circle" src=" {{asset('image/iftekher.jpg')}}" alt="website logo"
           height="50" width="50"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -29,7 +29,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
+            <a class="nav-link" aria-current="page" href="{{url('/')}}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('gellery')}}">gellery</a>
@@ -148,7 +148,11 @@
   
     </div>
     <!-- ==========================================contrainer here===================================== -->
-    <a href="#home"><img src="{{asset('image/up.svg')}}" class="arrow" alt="arrow"></a>
+      <a href="#home" class="arrow rounded-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+    </a>
   
     <script src="{{ asset ("js/bootstrap.min.js") }}"></script>
     <script src="{{ asset ('js/bootstrap.bundle.min.js') }}"></script>

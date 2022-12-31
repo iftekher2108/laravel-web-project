@@ -54,7 +54,7 @@ Route::get('/editstudentform/{id}',[StudentController::class,'editstudentform'])
 Route::post('/update/{id}',[StudentController::class,'update']);
 Route::post('/store', [StudentController::class,'store']);
 Route::get('/destroy/{id}',[StudentController::class,'destroy']);
-
+Route::get('/studentprofile/{id}',[StudentController::class,'studentprofile']);
 
 // student data management end here
 
