@@ -17,7 +17,7 @@
                     {{-- {{ __('You are logged in!') }} --}}
 
 
-                    <h1>this is {{ Auth::user(->name) }} setting page</h1>
+                    <h1>this is {{ Auth::user()->name }} setting page</h1>
                 </div>
             </div>
         </div>
