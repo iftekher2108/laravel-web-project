@@ -67,7 +67,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{url('/home')}}">
+                                    <a class="dropdown-item" href="{{url('/admindashboard')}}">
                                         {{ __('dashboard') }}
                        </a>
                                     <a class="dropdown-item" href="{{url('/accountsetting')}}">
