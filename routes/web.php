@@ -72,5 +72,11 @@ Route::get('/studentprofile/{id}',[StudentController::class,'studentprofile']);
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+
+
+
+Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 Route:: get('/accountsetting',[HomeController::class,'accountsetting'])->name('accountsetting');
+Route::get('/studentlist', [HomeController::class, 'studentlist'])->name('studentlist');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\StudentController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class HomeController extends Controller
 {
@@ -24,10 +25,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('dashboard.admindashboard');
     }
 
     public function accountsetting() {
         return view("accountsetting");
     }
+
+    public function studentlist()
+    {
+        return view('dashboard.studentlist');
+    }
+
+
+
+
+
 }

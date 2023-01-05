@@ -17,12 +17,20 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    
+    {{-- awesome aside menu bar start --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset('custom/custom.css') }}">
+    <link href="{{ asset('plugins/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    {{-- awesome aside menu bar end --}}
+    
+    
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss','resources/js/app.js'])
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-success shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -82,6 +90,10 @@
             </div>
         </nav>
 
+    <aside>
+
+    </aside>
+
         <main class="py-4">
             @yield('content')
         </main>
@@ -100,5 +112,16 @@
     <script src="{{ asset ('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('popper/popper.min.js') }}"></script> --}}
     {{-- <script src="{{ asset("custom/main.js") }}"></script> --}}
+
+
+
+
+
+    
+<script src="{{ asset('custom/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('custom/feather.min.js') }}"></script>
+<script src="{{ asset('plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
+<script src="{{ asset('custom/script.js') }}"></script>
+<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
