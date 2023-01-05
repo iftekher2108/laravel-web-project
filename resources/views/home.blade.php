@@ -18,7 +18,7 @@
                                         <a href="#"><i class="fa-solid fa-gauge"></i> <span> Dashboard</span> <span
                                                 class="menu-arrow"></span></a>
                                         <ul>
-                                            <li><a href="{{ url('dashboard') }}">Admin Dashboard</a></li>
+                                            <li><a href="{{ url('home') }}">Admin Dashboard</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu">
