@@ -65,16 +65,15 @@
     <div class="container-fluid"> --}}
         <!-- ====================================home front section here============================= -->
 
-@extends('webpages.master')
-@section('content')
+@extends('home')
+@section('dash-content')
 
 
         <!-- ============================================home front section here=================================== -->
         <hr>
         <!-- ================================================trainer and mentor colomn with icon here================================== -->
-<div class="suraiya text-center p-3 rounded-4" data-aos="zoom-in">
-<h1 class="text-uppercase" style=" text-decoration: underline;">Lorem ipsum dolor sit amet.</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, distinctio omnis! Quod cum non eligendi incidunt dolor nesciunt repudiandae culpa, fuga blanditiis mollitia fugit quos, fugiat at nulla ea consectetur?</p>
+<div class="suraiya text-center p-3 rounded-4">
+<h1 class="text-uppercase">Submit a student data</h1>
 </div>
 <hr>
         <!-- ===========================================form design start is here==================================== -->
@@ -83,7 +82,6 @@
                 <img src="image/webform.png" class="img-fluid" alt="banner" height="400" width="400">
             </div>
             <div class="form-menu">
-                <h1 class="mb-2 mt-0 p-0">Register to this Website</h1>
                 <form action="{{url('store') }}" method="POST" enctype="multipart/form-data">
                   @csrf
                   <div class="mb-3">
@@ -131,29 +129,26 @@
                       <div class="form-floating mb-2">
                         <select class="form-select" name="shift" id="floatingSelect" aria-label="Floating label select example">
                           <option selected>Select One Of Them</option>
-                          <option >First Shift</option>
-                          <option >Second Shift</option>
+                          <option >First</option>
+                          <option >Second</option>
                         </select>
                         <label for="floatingSelect">Shift</label>
                       </div>
                       <div class="form-floating mb-2">
                         <select class="form-select" name="group" id="floatingSelect" aria-label="Floating label select example">
                           <option selected>Select One Of Them</option>
-                          <option >Section A</option>
-                          <option >Section B</option>
+                          <option >A</option>
+                          <option >B</option>
                         </select>
                         <label for="floatingSelect">Group Section</label>
                       </div>
                       <div class="d-grid gap-2">
-                        <button class="btn" type="submit">Insert Data</button>
+                        <button class="btn btn-success" type="submit">Insert Data</button>
                       </div>
                     </form>
             </div>
 
         </div>
-        <hr>
-        <h3 style=" text-decoration: underline;">Lorem ipsum dolor sit amet.</h3>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad animi laudantium, fugiat cumque praesentium ex vitae eum! Deleniti eum ab, aut optio eius assumenda temporibus ex error. Iste, hic.</p>
 
 
 
@@ -186,7 +181,6 @@
 
         <!-- ===========================================feature title here========================================== -->
 
-        <hr>
 
 
 

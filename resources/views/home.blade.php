@@ -27,7 +27,7 @@
                                         <ul>
                                             <li><a href="{{ url('studentlist') }}">Student List</a></li>
                                             <li><a href="{{ url('student-detail') }}">Student View</a></li>
-                                            <li><a href="add-student.html">Student Add</a></li>
+                                            <li><a href="{{ url('addstudentform') }}">Student Add</a></li>
                                             <li><a href="edit-student.html">Student Edit</a></li>
                                         </ul>
                                     </li>
@@ -37,7 +37,7 @@
                                         <ul>
                                             <li><a href="{{ url('teacherlist') }}">Teacher List</a></li>
                                             <li><a href="{{ url('teacher-detail') }}">Teacher View</a></li>
-                                            <li><a href="add-teacher.html">Teacher Add</a></li>
+                                            <li><a href="{{ url('add-teacher') }}">Teacher Add</a></li>
                                             <li><a href="edit-teacher.html">Teacher Edit</a></li>
                                         </ul>
                                     </li>

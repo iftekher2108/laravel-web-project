@@ -195,7 +195,7 @@ public function studentprofile($id) {
        $student->group=$request->group;
        
         $student->save();
-        return redirect('/table');
+        return redirect('/studentlist');
 
     }
 
@@ -213,6 +213,6 @@ public function studentprofile($id) {
             unlink(public_path('student/upload'.$student->photo));
         }
         $student->delete();
-        return redirect('table');
+        return redirect('/studentlist');
     }
 }

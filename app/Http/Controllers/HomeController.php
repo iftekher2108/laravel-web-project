@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\StudentController;
+use App\Models\teacher;
+use App\Http\Controllers\TeacherController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Models\student;
 
 class HomeController extends Controller
 {
@@ -25,7 +28,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard.admindashboard');
+        $teacher = teacher::all();
+        $student = Student::all();
+        return view('dashboard.admindashboard',compact('student','teacher'));
     }
 
     public function accountsetting() {
@@ -34,7 +39,8 @@ class HomeController extends Controller
 
     public function studentlist()
     {
-        return view('dashboard.studentlist');
+        $student = student::all();
+        return view('dashboard.studentlist',compact('student'));
     }
     public function studentDetail() 
     {
@@ -57,7 +63,8 @@ class HomeController extends Controller
 
     public function teacherlist()
     {
-        return view('dashboard.teacherlist');
+        $teacher = teacher::all();
+        return view('dashboard.teacherlist',compact('teacher'));
     }
 
 

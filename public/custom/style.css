@@ -413,8 +413,6 @@ button.btn[type=submit] {
 
 /* ===================================table page===================== */
 table {
-  background: #000;
-  color: snow !important;
   outline: none;
   border: none;
   width: 100%;
@@ -426,10 +424,6 @@ table {
 table tr th {
   background: var(--color) !important;
   text-transform: uppercase;
-}
-table tr:nth-child(odd) {
-  background: rgb(82, 82, 82) !important;
-
 }
 table tr {
   transition: all 0.3s ease-in-out;

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -103,3 +104,11 @@ Route::get('/teacher-detail', [HomeController::class, 'teacherDetail'])->name('t
 
 
 // teacher section end here
+
+
+// teacher controller function route will show here
+Route::get('/add-teacher', [TeacherController::class, 'addteacher'])->name('addteacher');
+Route::post('/storeteacher', [TeacherController::class,'storeteacher']);
+
+
+// teacher controller function route will show here

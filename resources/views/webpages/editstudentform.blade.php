@@ -1,16 +1,14 @@
 
         <!-- ====================================home front section here============================= -->
-@extends('webpages.master')
-@section('content')
+@extends('home')
+@section('dash-content')
 
 
         <!-- ============================================home front section here=================================== -->
-        <hr>
 
         <!-- ================================================trainer and mentor colomn with icon here================================== -->
-<div class="suraiya text-center p-3 rounded-4" data-aos="zoom-in">
-<h1 class="text-uppercase" style=" text-decoration: underline;">Lorem ipsum dolor sit amet.</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, distinctio omnis! Quod cum non eligendi incidunt dolor nesciunt repudiandae culpa, fuga blanditiis mollitia fugit quos, fugiat at nulla ea consectetur?</p>
+<div class="suraiya text-center p-3 rounded-4">
+<h1 class="text-uppercase">Lorem ipsum dolor sit amet.</h1>
 </div>
 <hr>
         <!-- ===========================================form design start is here==================================== -->
@@ -67,29 +65,27 @@
                       <div class="form-floating mb-2">
                         <select class="form-select" name="shift" id="floatingSelect" aria-label="Floating label select example">
                           <option selected>{{ $student->shift }}</option>
-                          <option >First Shift</option>
-                          <option >Second Shift</option>
+                          <option >First</option>
+                          <option >Second</option>
                         </select>
                         <label for="floatingSelect">Shift</label>
                       </div>
                       <div class="form-floating mb-2">
                         <select class="form-select" name="group" id="floatingSelect" aria-label="Floating label select example">
                           <option selected>{{ $student->group }}</option>
-                          <option >Section A</option>
-                          <option >Section B</option>
+                          <option >A</option>
+                          <option >B</option>
                         </select>
                         <label for="floatingSelect">Group Section</label>
                       </div>
                       <div class="d-grid gap-2">
-                        <button class="btn" type="submit">Update Data</button>
+                        <button class="btn btn-success" type="submit">Update Data</button>
                       </div>
                     </form>
             </div>
 
         </div>
         <hr>
-        <h3 style=" text-decoration: underline;">Lorem ipsum dolor sit amet.</h3>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad animi laudantium, fugiat cumque praesentium ex vitae eum! Deleniti eum ab, aut optio eius assumenda temporibus ex error. Iste, hic.</p>
 
 
 
@@ -122,7 +118,6 @@
 
         <!-- ===========================================feature title here========================================== -->
 
-        <hr>
 
 
 

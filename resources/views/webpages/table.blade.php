@@ -99,7 +99,6 @@
     <h1 style=" text-decoration: underline;">Student Information Is Here.</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ratione voluptatem doloremque, nam rerum in impedit tempore molestias adipisci dolores veniam deserunt repellendus accusantium provident, recusandae aliquam hic fugit optio?</p>
         </div>
-        <a href="{{url('addstudentform')}}" class="nav-link m-3"><button class="btn btn-success px-5 py-2">Add Student</button></a>
         <hr>
             @if ($errors->any())
       <div class="alert alert-danger">
@@ -148,8 +147,6 @@
             <td>{{ $students->shift }}</td>
             <td>{{ $students->group }}</td>
             <td><a href="{{ url('studentprofile',$students->id) }}"   class="nav-link"><button class="btn btn-success">View</button></a></td>
-            <td><a href="{{url('editstudentform',$students->id)}}" class="nav-link text-success"><i class="fa-solid fa-pen-to-square"></a></i></td>
-            <td><a href="{{ url('destroy',$students->id) }}" class="nav-link text-success"><i class="fa-solid fa-trash"></i></a></td>
         </tr>
 
         @endforeach

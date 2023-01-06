@@ -60,4 +60,30 @@
   { 
     color:white;
   }
+  table {
+    color: snow !important;
+    outline: none;
+    border: none;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  
+  }
+  
+  table tr th {
+    background:#089b56 !important;
+    text-transform: uppercase;
+  }
+  table tr {
+    transition: all 0.3s ease-in-out;
+  }
+  table tr:hover {
+    background:#089b56 !important;
+  }
+  table td:hover .fa-solid.fa-pen-to-square,
+  table td:hover .fa-solid.fa-trash 
+  {
+    color: white !important;
+  }
+
   
