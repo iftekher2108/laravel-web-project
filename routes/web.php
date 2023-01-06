@@ -76,7 +76,30 @@ Auth::routes();
 
 
 
-
+// dashboard section start here
 Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
 Route:: get('/accountsetting',[HomeController::class,'accountsetting'])->name('accountsetting');
+// dashboard section end here
+
+// student section start here
 Route::get('/studentlist', [HomeController::class, 'studentlist'])->name('studentlist');
+Route::get('/student-detail',[HomeController::class,'studentDetail'])->name('studentDetail');
+Route::get('/student-add', [HomeController::class, 'studentAdd'])->name('studentAdd');
+Route::get('/student-edit', [HomeController::class,'studentEdit'])->name('studentEdit');
+
+
+
+// student section end here
+
+
+
+// teacher section start here
+Route::get('/teacherlist', [HomeController::class, 'teacherlist'])->name('teacherlist');
+Route::get('/teacher-detail', [HomeController::class, 'teacherDetail'])->name('teacherDetail');
+
+
+
+
+
+
+// teacher section end here

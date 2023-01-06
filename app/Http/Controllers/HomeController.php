@@ -36,7 +36,29 @@ class HomeController extends Controller
     {
         return view('dashboard.studentlist');
     }
+    public function studentDetail() 
+    {
+        return view('dashboard.studentDetail');
+    }
 
+    public function studentAdd()
+    {
+        return view('dashboard.studentAdd');
+    }
+
+    public function teacherDetail()
+    {
+        return view('dashboard.teacherDetail');
+    }
+
+
+
+
+
+    public function teacherlist()
+    {
+        return view('dashboard.teacherlist');
+    }
 
 
 

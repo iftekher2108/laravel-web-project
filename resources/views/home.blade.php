@@ -15,34 +15,34 @@
                                         <span>Main Menu</span>
                                     </li>
                                     <li class="submenu">
-                                        <a href="#"><i class="fa-solid fa-gauge"></i> <span> Dashboard</span> <span
+                                        <a href="#"><i class="fa-solid fa-gauge mx-2"></i> <span> Dashboard</span> <span
                                                 class="menu-arrow"></span></a>
                                         <ul>
                                             <li><a href="{{ url('home') }}">Admin Dashboard</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu">
-                                        <a href="#"><i class="fas fa-graduation-cap"></i> <span> Students</span> <span
+                                        <a href="#"><i class="fas fa-graduation-cap mx-2"></i> <span> Students</span> <span
                                                 class="menu-arrow"></span></a>
                                         <ul>
                                             <li><a href="{{ url('studentlist') }}">Student List</a></li>
-                                            <li><a href="student-details.html">Student View</a></li>
+                                            <li><a href="{{ url('student-detail') }}">Student View</a></li>
                                             <li><a href="add-student.html">Student Add</a></li>
                                             <li><a href="edit-student.html">Student Edit</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu">
-                                        <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span>
+                                        <a href="#"><i class="fas fa-chalkboard-teacher mx-2"></i> <span> Teachers</span>
                                             <span class="menu-arrow"></span></a>
                                         <ul>
-                                            <li><a href="teachers.html">Teacher List</a></li>
-                                            <li><a href="teacher-details.html">Teacher View</a></li>
+                                            <li><a href="{{ url('teacherlist') }}">Teacher List</a></li>
+                                            <li><a href="{{ url('teacher-detail') }}">Teacher View</a></li>
                                             <li><a href="add-teacher.html">Teacher Add</a></li>
                                             <li><a href="edit-teacher.html">Teacher Edit</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu">
-                                        <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span
+                                        <a href="#"><i class="fas fa-book-reader mx-2"></i> <span> Subjects</span> <span
                                                 class="menu-arrow"></span></a>
                                         <ul>
                                             <li><a href="subjects.html">Subject List</a></li>
@@ -55,7 +55,7 @@
                                     </li>
 
                                     <li class="submenu">
-                                        <a href="#"><i class="fa fa-newspaper"></i> <span> Blogs</span>
+                                        <a href="#"><i class="fa fa-newspaper mx-2"></i> <span> Blogs</span>
                                             <span class="menu-arrow"></span>
                                         </a>
                                         <ul>
@@ -68,7 +68,7 @@
                                         <span>Pages</span>
                                     </li>
                                     <li class="submenu">
-                                        <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span>
+                                        <a href="#"><i class="fas fa-shield-alt mx-2"></i> <span> Authentication </span>
                                             <span class="menu-arrow"></span></a>
                                         <ul>
                                             <li><a href="login.html">Login</a></li>
@@ -80,7 +80,7 @@
                                         <span>Others</span>
                                     </li>
                                     <li class="submenu">
-                                        <a href="javascript:void(0);"><i class="fas fa-code"></i> <span>Multi Level</span>
+                                        <a href="javascript:void(0);"><i class="fas fa-code mx-2"></i> <span>Multi Level</span>
                                             <span class="menu-arrow"></span></a>
                                         <ul>
                                             <li class="submenu">
