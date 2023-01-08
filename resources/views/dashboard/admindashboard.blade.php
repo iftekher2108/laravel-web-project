@@ -57,7 +57,7 @@
     <td class="text-nowrap">
     <div>{{ $students->id }}</div>
     </td>
-    <td class="text-nowrap">
+    <td class="text-nowrap text-start">
     <a href="profile.html">
     <img class="rounded-circle" src="{{ asset('/upload/student')}}/{{$students->photo }}" width="25" alt="Star Students">
     {{ $students->name }}
@@ -112,7 +112,6 @@
     <th class="text-center">Gender</th>
     <th class="text-center">Section</th>
     <th class="text-center">Department</th>
-    <th class="text-center" colspan="2">action</th>
     </tr>
     </thead>
     <tbody>

@@ -47,17 +47,11 @@ class HomeController extends Controller
         return view('dashboard.studentDetail');
     }
 
-    public function studentAdd()
-    {
-        return view('dashboard.studentAdd');
-    }
 
     public function teacherDetail()
     {
         return view('dashboard.teacherDetail');
     }
-
-
 
 
 

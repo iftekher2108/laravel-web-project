@@ -52,12 +52,12 @@
             <td class="text-center">
                 <div>{{ $teachers->department }}</div>
                 </td>
-                {{-- <td class="text-center">
-                    <div><a href="{{url('editstudentform',$teachers->id)}}" class="nav-link"><i class="fa-solid fa-pen-to-square"></i></a></div>
+                <td class="text-center">
+                    <div><a href="{{url('edit-teacher',$teachers->id)}}" class="nav-link"><i class="fa-solid fa-pen-to-square"></i></a></div>
                     </td>
                     <td class="text-center">
-                        <div><a href="{{ url('destroy',$teachers->id) }}" class="nav-link"><i class="fa-solid fa-trash"></i></a></div>
-                        </td> --}}
+                        <div><a href="{{ url('destroy-teacher',$teachers->id) }}" class="nav-link"><i class="fa-solid fa-trash"></i></a></div>
+                        </td>
     </tr>
     @endforeach
 

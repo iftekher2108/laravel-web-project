@@ -13,6 +13,12 @@ class TeacherController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         //
@@ -21,6 +27,12 @@ class TeacherController extends Controller
     public function addteacher()
     {
         return view('dashboard.addteacher');
+    }
+
+    public function editteacher($id) 
+    {
+        $teacher = teacher::find($id);
+        return view('dashboard.editteacher', compact('teacher'));
     }
     /**
      * Show the form for creating a new resource.
@@ -102,9 +114,40 @@ class TeacherController extends Controller
      * @param  \App\Models\teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateteacherRequest $request, teacher $teacher)
+    public function updateteacher(UpdateteacherRequest $request, teacher $teacher,$id)
     {
         //
+        $request->validate([
+            'name'=>'required',
+            'photo'=>'nullable|mimes:png,jpg,jpeg|max:15000',
+            'email'=>'required',
+            'address'=>'required',
+            'gender'=>'required',
+            'section'=>'required',
+            'department'=>'required'
+        ]);
+
+
+        $teacher = teacher::find($id);
+
+        if (isset($request->photo)) {
+            $filename = time() . '.' . $request->photo->extension();
+            $path = public_path('upload/teacher');
+            $request->photo->move($path, $filename);
+            $teacher->photo = $filename;
+        }
+
+        $teacher->name = $request->name;
+        $teacher->number = $request->number;
+        $teacher->email = $request->email;
+        $teacher->address = $request->address;
+        $teacher->gender = $request->gender;
+        $teacher->section = $request->section;
+        $teacher->department = $request->department;
+
+        $teacher->save();
+        return redirect('/teacherlist');
+
     }
 
     /**
@@ -113,8 +156,15 @@ class TeacherController extends Controller
      * @param  \App\Models\teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function destroy(teacher $teacher)
+    public function destroyteacher(teacher $teacher,$id)
     {
         //
+        $teacher = teacher::find($id);
+        if($teacher->photo != '' && file_exists(public_path('upload/teacher'.$teacher->photo))) {
+            unlink(public_path('upload/teacher'.$teacher->photo));
+        }
+        $teacher->delete();
+        return redirect('/teacherlist');
+
     }
 }

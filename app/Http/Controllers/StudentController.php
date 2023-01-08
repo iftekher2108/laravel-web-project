@@ -13,46 +13,22 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
-public function homepage()
-{
-    return view("webpages.index");
-}
 
-public function gellery() 
-{
-    return view("webpages.gellery");
-}
+     public function __construct()
+     {
+         $this->middleware('auth');
+     }
+ 
 
-public function blog() 
-{
-    return view("webpages.blog");
-}
 
-public function about() 
-{
-    return view("webpages.about");
-}
 
-public function policy() {
-    return view("webpages.policy");
-}
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
-public function studentprofile($id) {
-    $student=Student::find($id);
-    return view("webpages.studentprofile",compact('student'));
-}
+
     /**
      * Store a newly created resource in storage.
      *
@@ -110,7 +86,7 @@ public function studentprofile($id) {
 
 
   
-        return redirect('/addstudentform');
+        return redirect('/studentlist');
 
 
     }
@@ -144,12 +120,7 @@ public function studentprofile($id) {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function table() 
-    {
-        $student=Student::all(); //Model
-          
-        return view("webpages.table",compact('student'));
-    }
+
 
      public function editstudentform($id) {
         $student=Student::find($id);
@@ -209,8 +180,8 @@ public function studentprofile($id) {
     {
         //
         $student = Student::find($id);
-        if($student->photo != '' && file_exists(public_path('student/upload'.$student->photo))) {
-            unlink(public_path('student/upload'.$student->photo));
+        if($student->photo != '' && file_exists(public_path('upload/student'.$student->photo))) {
+            unlink(public_path('upload/student'.$student->photo));
         }
         $student->delete();
         return redirect('/studentlist');
