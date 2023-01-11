@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\blog;
 use App\Http\Requests\StoreblogRequest;
 use App\Http\Requests\UpdateblogRequest;
+use Illuminate\Support\Facades\Auth;
+use Nette\Utils\Random;
 
 class BlogController extends Controller
 {
@@ -22,7 +24,6 @@ class BlogController extends Controller
     {
         //
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -36,18 +37,57 @@ class BlogController extends Controller
 
     public function adminblog() 
     {
-        return view('dashboard.blog');
+        $blog = blog::all();
+        return view('dashboard.blog',compact('blog'));
     }
 
+
+
+
+    public function addblog() 
+    {
+        return view('dashboard.addblog');
+    }
     /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreblogRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreblogRequest $request)
+    public function storeblog(StoreblogRequest $request)
     {
         //
+
+
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'photo' => 'nullable|mimes:png,jpg,jpeg|max:20000'
+        ]);
+
+        $blog = new blog;
+
+        if(isset($request->photo)) 
+        {
+            $filename =date('l-d-F-m-y-h-i-sa',random_int(1,1000)). ".".$request->photo->extension();
+            $path = public_path('upload/blog');
+            $request->photo->move($path, $filename);
+            $blog->photo = $filename;
+        }
+
+
+        $blog->title = $request->title;
+        $blog->content = $request->content;
+        $blog->category = $request->category;
+        $blog->user_name = $request->user()->name;
+
+
+
+        $blog->save();
+
+        return redirect('admin-blog');
+
+
     }
 
     /**
@@ -79,7 +119,7 @@ class BlogController extends Controller
      * @param  \App\Models\blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateblogRequest $request, blog $blog)
+    public function updateblog(UpdateblogRequest $request, blog $blog)
     {
         //
     }

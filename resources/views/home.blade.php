@@ -60,7 +60,7 @@
                                         </a>
                                         <ul>
                                             <li><a href="{{ url('admin-blog') }}">All Blogs</a></li>
-                                            <li><a href="add-blog.html">Add Blog</a></li>
+                                            <li><a href="{{ url('add-blog') }}">Add Blog</a></li>
                                             <li><a href="edit-blog.html">Edit Blog</a></li>
                                         </ul>
                                     </li>

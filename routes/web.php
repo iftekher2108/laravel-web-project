@@ -134,8 +134,8 @@ Route::get('/destroy-teacher/{id}', [TeacherController::class, 'destroyteacher']
 
 // blog controller function route will show here
 Route::get('/admin-blog', [BlogController::class, 'adminblog']);
-
-
+Route::get('/add-blog',[BlogController::class,'addblog']);
+Route::post('/storeblog', [BlogController::class, 'storeblog']);
 
 
 // blog controller function route will show here

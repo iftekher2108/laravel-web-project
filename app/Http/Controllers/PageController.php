@@ -8,6 +8,8 @@ use App\Models\student;
 
 use App\Models\teacher;
 
+use App\Models\blog;
+
 
 class PageController extends Controller
 {
@@ -42,7 +44,8 @@ class PageController extends Controller
 
     public function blog()
     {
-        return view("webpages.blog");
+        $blog = blog::all();
+        return view("webpages.blog".compact('blog'));
     }
 
     public function table() 
