@@ -40,6 +40,7 @@
     <table class="table star-student table-hover table-center table-borderless table-striped">
     <thead class="thead-light">
     <tr>
+    <th>ACTION</th>
     <th>ID</th>
     <th>Name</th>
     <th class="text-center">Roll</th>
@@ -54,6 +55,7 @@
         @foreach ($student as $students)
             
     <tr>
+        <td><input type="checkbox" name="" id=""></td>
     <td class="text-nowrap">
     <div>{{ $students->id }}</div>
     </td>
@@ -104,6 +106,7 @@
     <table class="table star-student table-hover table-center table-borderless table-striped">
     <thead class="thead-light">
     <tr>
+        <th>ACTION</th>
     <th>ID</th>
     <th>Name</th>
     <th class="text-center">Number</th>
@@ -118,6 +121,7 @@
         @foreach ($teacher as $teachers)
             
     <tr>
+        <td><input type="checkbox" name="" id=""></td>
     <td class="text-nowrap">
     <div>{{ $teachers->id }}</div>
     </td>

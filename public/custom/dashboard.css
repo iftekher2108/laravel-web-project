@@ -73,11 +73,13 @@
   table tr th {
     background:#089b56 !important;
     text-transform: uppercase;
+    color: #fff !important;
   }
   table tr {
     transition: all 0.3s ease-in-out;
   }
   table tr:hover {
+    color: white !important;
     background:#089b56 !important;
   }
   table td:hover .fa-solid.fa-pen-to-square,
@@ -86,4 +88,18 @@
     color: white !important;
   }
 
+
+  .form-check-input:checked {
+  background-color:  #16b485!important;
+ }
+  form :is(input,input:focus) {
+    border: none !important;
+    border-bottom: 2px solid #16b485 !important;
+    outline:none;
+    box-shadow:none !important;
+  }
   
+  form button {
+    border:none !important;
+    border-bottom: 2px solid #16b485 !important;
+  }

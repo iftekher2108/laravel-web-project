@@ -14,6 +14,7 @@
     <table class="table star-student table-hover table-center table-borderless table-striped">
     <thead class="thead-light">
     <tr>
+    <th class="text-center" colspan="3">ACTION</th>
     <th>ID</th>
     <th>Name</th>
     <th class="text-center">Number</th>
@@ -22,13 +23,22 @@
     <th class="text-center">Gender</th>
     <th class="text-center">Section</th>
     <th class="text-center">Department</th>
-    <th class="text-center" colspan="2">action</th>
     </tr>
     </thead>
     <tbody>
         @foreach ($teacher as $teachers)
             
     <tr>
+        <td class="text-center"><input type="checkbox" name="" id=""></td>
+        <td class="text-center">
+            <div><a href="{{url('edit-teacher',$teachers->id)}}" class="nav-link"><i class="fa-solid fa-pen-to-square"></i></a></div>
+            </td>
+            <td class="text-center">
+                <div><a href="{{ url('destroy-teacher',$teachers->id) }}" class="nav-link"><i class="fa-solid fa-trash"></i></a></div>
+                </td>
+
+
+
     <td class="text-nowrap">
     <div>{{ $teachers->id }}</div>
     </td>
@@ -52,12 +62,7 @@
             <td class="text-center">
                 <div>{{ $teachers->department }}</div>
                 </td>
-                <td class="text-center">
-                    <div><a href="{{url('edit-teacher',$teachers->id)}}" class="nav-link"><i class="fa-solid fa-pen-to-square"></i></a></div>
-                    </td>
-                    <td class="text-center">
-                        <div><a href="{{ url('destroy-teacher',$teachers->id) }}" class="nav-link"><i class="fa-solid fa-trash"></i></a></div>
-                        </td>
+   
     </tr>
     @endforeach
 

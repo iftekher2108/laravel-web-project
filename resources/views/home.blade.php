@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-3 col-sm-12">
-                <div class="card">
+                <div class="card sticky-top">
                     <div class="card-header">{{ __('Dashboard Menu') }}</div>
 
                     <div class="card-body">
