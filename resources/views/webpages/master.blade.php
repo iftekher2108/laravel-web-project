@@ -32,19 +32,19 @@
             <a class="nav-link" aria-current="page" href="{{url('/')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('gellery')}}">gellery</a>
+            <a class="nav-link" href="{{url('gellery')}}">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('blog')}}">blog</a>
+            <a class="nav-link" href="{{url('blog')}}">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('about')}}">about us</a>
+            <a class="nav-link" href="{{url('about')}}">About us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('policy')}}">private policy</a>
+            <a class="nav-link" href="{{url('policy')}}">Private policy</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('table')}}">table</a>
+            <a class="nav-link" href="{{url('table')}}">Informatiom</a>
           </li> 
         </ul>
       </div>
@@ -52,7 +52,7 @@
   </nav>
   <!-- =========================================navigation menu bar here========================================= -->
   <!-- ==========================================body contrainer here================================= -->
-  <div class="container-fluid">
+<main>
 
 
 @yield('content')
@@ -61,7 +61,7 @@
 
 
     
-    <div class="col">
+</main>
         <div class="card card-cover h-100 overflow-hidden text-bg-dark shadow-lg"
           style="background-image: url('unsplash-photo-2.jpg');">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">

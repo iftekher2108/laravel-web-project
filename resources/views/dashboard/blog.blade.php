@@ -2,12 +2,12 @@
 @section('dash-content')
 @foreach ($blog as $blogs)
     
-@endforeach
+
 <div class="card d-flex flex-column gap-1 p-2">
     <h1 class="text-center">blog index id of: {{ $blogs->id }}</h1>
     <h2 class="card-title">{{ $blogs->title }}</h2>
     <div class="d-flex gap-2">
-    <span>{{ $blogs->user_name }}</span>|<span>{{ $blogs->created_at }}</span>
+    <span>{{ $blogs->user_name }}</span>|<span>Category : {{ $blogs->category }}</span>|<span>{{ $blogs->created_at }}</span>
     </div>
     <hr>
     <div class="content">
@@ -19,4 +19,5 @@
     </div>
     
 </div>
+@endforeach
 @endsection

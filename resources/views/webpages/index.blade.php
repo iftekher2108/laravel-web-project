@@ -92,7 +92,7 @@
     <!-- ============================================home front section here=================================== -->
     <hr>
     <!-- ==============================================trainer and mentor colomn with icon here================================== -->
-    <div class="px-4 py-5 rounded-4" id="featured-3" data-aos="zoom-in-right">
+    <div class="px-4 py-5 rounded-4 m-0" id="featured-3" data-aos="zoom-in-right">
       <h2 class="pb-2 border-bottom">Our Mentor and Trainer</h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="feature col" data-aos="zoom-in-right" data-aos-duration="1500">
@@ -147,7 +147,7 @@
 
     <!-- ============================================hanging courses icon here======================================= -->
     <hr>
-    <div class="px-4 py-5 rounded-4" id="hanging-icons" data-aos="zoom-in-left">
+    <div class="px-4 py-5 rounded-4 m-0" id="hanging-icons" data-aos="zoom-in-left">
       <h2 class="pb-2 border-bottom">Our Courses</h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex align-items-start km" data-aos="zoom-in-left">
@@ -207,7 +207,7 @@
 
     <!-- ================================================icon gird here===================================== -->
     <hr>
-    <div class="px-4 py-5 rounded-4" id="icon-grid" data-aos="zoom-in">
+    <div class="px-4 py-5 rounded-4 m-0" id="icon-grid" data-aos="zoom-in">
       <h2 class="pb-2 border-bottom">Lorem, ipsum.</h2>
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
@@ -284,7 +284,7 @@
 
     <hr>
     <!-- ==============================================feature title here======================================= -->
-    <div class="px-4 py-5 mb-4 rounded-4" data-aos="zoom-in-right">
+    <div class="px-4 py-5 mb-4 rounded-4 m-0" data-aos="zoom-in-right">
       <h2 class="pb-2 border-bottom">Lorem, ipsum dolor.</h2>
 
       <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">

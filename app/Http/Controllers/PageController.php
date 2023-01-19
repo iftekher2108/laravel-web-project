@@ -45,7 +45,7 @@ class PageController extends Controller
     public function blog()
     {
         $blog = blog::all();
-        return view("webpages.blog".compact('blog'));
+        return view("webpages.blog",compact('blog'));
     }
 
     public function table() 
