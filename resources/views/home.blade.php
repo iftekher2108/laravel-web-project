@@ -4,10 +4,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-3 col-sm-12">
-                <div class="card sticky-top">
+                <div class="card sticky-top navbar-expand-md">
                     <div class="card-header">{{ __('Dashboard Menu') }}</div>
+                        <button class="navbar navbar-toggler btn btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#SupportedContent" aria-controls="SupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                            <span class="navbar-toggler-icon m-auto"></span>
+                        </button>
+                    <div class="card-body collapse navbar-collapse" id="SupportedContent">
 
-                    <div class="card-body">
                         <div class="sidebar-inner slimscroll">
                             <div id="sidebar-menu" class="sidebar-menu">
                                 <ul>

@@ -120,7 +120,6 @@
 
     
 <script src="{{ asset('custom/jquery-3.6.0.min.js') }}"></script>
-<script src="{{ asset('custom/feather.min.js') }}"></script>
 <script src="{{ asset('plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ asset('custom/script.js') }}"></script>
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
