@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-3 col-sm-12">
-                <div class="card sticky-top navbar-expand-md">
+                <div class="card sticky-top navbar-expand-md" style="height:100vh;">
                     <div class="card-header">{{ __('Dashboard Menu') }}</div>
                         <button class="navbar navbar-toggler btn btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#SupportedContent" aria-controls="SupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                             <span class="navbar-toggler-icon m-auto"></span>
@@ -15,7 +15,7 @@
                             <div id="sidebar-menu" class="sidebar-menu">
                                 <ul>
                                     <li class="menu-title">
-                                        <span>Main Menu</span>
+                                        <span>Management Menu</span>
                                     </li>
                                     <li class="submenu">
                                         <a href="#"><i class="fa-solid fa-gauge mx-2"></i> <span> Dashboard</span> <span
@@ -31,7 +31,6 @@
                                             <li><a href="{{ url('studentlist') }}">Student List</a></li>
                                             <li><a href="{{ url('student-detail') }}">Student View</a></li>
                                             <li><a href="{{ url('addstudentform') }}">Student Add</a></li>
-                                            <li><a href="edit-student.html">Student Edit</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu">
@@ -41,9 +40,10 @@
                                             <li><a href="{{ url('teacherlist') }}">Teacher List</a></li>
                                             <li><a href="{{ url('teacher-detail') }}">Teacher View</a></li>
                                             <li><a href="{{ url('add-teacher') }}">Teacher Add</a></li>
-                                            <li><a href="edit-teacher.html">Teacher Edit</a></li>
                                         </ul>
                                     </li>
+
+
                                     <li class="submenu">
                                         <a href="#"><i class="fas fa-book-reader mx-2"></i> <span> Subjects</span> <span
                                                 class="menu-arrow"></span></a>
@@ -53,8 +53,10 @@
                                             <li><a href="edit-subject.html">Subject Edit</a></li>
                                         </ul>
                                     </li>
+
+
                                     <li class="menu-title">
-                                        <span>Management</span>
+                                        <span>Blog Management</span>
                                     </li>
 
                                     <li class="submenu">
@@ -64,49 +66,15 @@
                                         <ul>
                                             <li><a href="{{ url('admin-blog') }}">All Blogs</a></li>
                                             <li><a href="{{ url('add-blog') }}">Add Blog</a></li>
-                                            <li><a href="edit-blog.html">Edit Blog</a></li>
+
                                         </ul>
                                     </li>
-                                    <li class="menu-title">
-                                        <span>Pages</span>
+
+
+                                    <li class="menu-title vstack mt-5 mx-auto">
+                                        <span class="text-center">{{ Auth::user()->name }}</span>
                                     </li>
-                                    <li class="submenu">
-                                        <a href="#"><i class="fas fa-shield-alt mx-2"></i> <span> Authentication </span>
-                                            <span class="menu-arrow"></span></a>
-                                        <ul>
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="register.html">Register</a></li>
-                                            <li><a href="forgot-password.html">Forgot Password</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-title">
-                                        <span>Others</span>
-                                    </li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);"><i class="fas fa-code mx-2"></i> <span>Multi Level</span>
-                                            <span class="menu-arrow"></span></a>
-                                        <ul>
-                                            <li class="submenu">
-                                                <a href="javascript:void(0);"> <span>Level 1</span> <span
-                                                        class="menu-arrow"></span></a>
-                                                <ul>
-                                                    <li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-                                                    <li class="submenu">
-                                                        <a href="javascript:void(0);"> <span> Level 2</span> <span
-                                                                class="menu-arrow"></span></a>
-                                                        <ul>
-                                                            <li><a href="javascript:void(0);">Level 3</a></li>
-                                                            <li><a href="javascript:void(0);">Level 3</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0);"> <span>Level 1</span></a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                         </div>

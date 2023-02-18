@@ -6,7 +6,6 @@ use App\Models\blog;
 use App\Http\Requests\StoreblogRequest;
 use App\Http\Requests\UpdateblogRequest;
 use Illuminate\Support\Facades\Auth;
-use Nette\Utils\Random;
 
 class BlogController extends Controller
 {
@@ -46,7 +45,15 @@ class BlogController extends Controller
 
     public function addblog() 
     {
-        return view('dashboard.addblog');
+        $blog=blog::all();
+        return view('dashboard.addblog',compact('blog'));
+    }
+
+    public function editblog($id) 
+    {
+        $blog=blog::find($id);
+        $blogs=blog::all();
+        return view('dashboard.editblog',compact('blog','blogs'));
     }
     /**
      * Store a newly created resource in storage.
@@ -119,9 +126,37 @@ class BlogController extends Controller
      * @param  \App\Models\blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function updateblog(UpdateblogRequest $request, blog $blog)
+    public function updateblog(UpdateblogRequest $request, blog $blog, $id)
     {
         //
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'photo' => 'nullable|mimes:png,jpg,jpeg|max:20000'
+        ]);
+
+        $blog = blog::find($id);
+
+        if(isset($request->photo)) 
+        {
+            $filename =date('l-d-F-m-y-h-i-sa',random_int(1,1000)). ".".$request->photo->extension();
+            $path = public_path('upload/blog');
+            $request->photo->move($path, $filename);
+            $blog->photo = $filename;
+        }
+
+        $blog->title = $request->title;
+        $blog->content = $request->content;
+        $blog->category = $request->category;
+        $blog->user_name = $request->user()->name;
+
+
+        $blog->save();
+
+        return redirect('admin-blog');
+
+
+
     }
 
     /**
@@ -130,8 +165,17 @@ class BlogController extends Controller
      * @param  \App\Models\blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(blog $blog)
+    public function destroyblog(blog $blog,$id)
     {
         //
+        $blog=blog::find($id);
+        if($blog->photo != '' && file_exists(public_path('upload/student'.$blog->photo))) {
+            unlink(public_path('upload/student'.$blog->photo));
+        }
+        $blog->delete();
+        return redirect('/admin-blog');
+
+
+
     }
 }

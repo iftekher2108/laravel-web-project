@@ -93,22 +93,34 @@
     <hr>
     <!-- ==============================================trainer and mentor colomn with icon here================================== -->
     <div class="px-4 py-5 rounded-4 m-0" id="featured-3" data-aos="zoom-in-right">
-      <h2 class="pb-2 border-bottom">Our Mentor and Trainer</h2>
+      <h2 class="pb-2 border-bottom">Teacher, Mentor and Trainer</h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        
+        
+        @for ($i=0;$i<3;$i++)
+          
+
         <div class="feature col" data-aos="zoom-in-right" data-aos-duration="1500">
           <div
             class="d-inline-flex align-items-center justify-content-center rounded text-bg-success bg-gradient fs-2 mb-3 overflow-hidden">
-            <img src="image/2.JPG" alt="image" width="250" height="200">
+            <img src="{{ asset('upload/teacher/'.$teacher[$i]->photo) }}" alt="image" width="250" height="200">
           </div>
-          <h3 class="fs-2">Iftekher Mahmud Pervez</h3>
-          <h5>Python Programming Expert</h5>
-          <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code
-            readability with the use of significant indentation.</p>
+          <h3 class="fs-2">{{ $teacher[$i]->name }}</h3>
+          <h5>ID NO: {{ $teacher[$i]->department }}</h5>
+          <h5>Department: {{ $teacher[$i]->department }}</h5>
+          <p>Email: {{ $teacher[$i]->email }}</p>
+          <p>Home Address: {{ $teacher[$i]->address }}</p>
+          <p>{{ $teacher[$i]->email }}</p>
           <a href="#" class="btn btn-success">
             contact with us
           </a>
         </div>
-        <div class="feature col" data-aos="zoom-in-right" data-aos-duration="1300">
+        @endfor
+
+
+
+
+        {{-- <div class="feature col" data-aos="zoom-in-right" data-aos-duration="1300">
           <div
             class="d-inline-flex align-items-center justify-content-center rounded text-bg-success bg-gradient fs-2 mb-3 overflow-hidden">
             <img src="image/5.jpg" alt="image" width="250" height="200">
@@ -134,7 +146,9 @@
             contact with us
           </a>
         </div>
-      </div>
+      </div> --}}
+
+
     </div>
 
     <!-- ================================================trainer and mentor colomn with icon here================================== -->
@@ -205,20 +219,35 @@
 
 
 
-    <!-- ================================================icon gird here===================================== -->
+    <!-- ================================================student list gird here===================================== -->
     <hr>
     <div class="px-4 py-5 rounded-4 m-0" id="icon-grid" data-aos="zoom-in">
-      <h2 class="pb-2 border-bottom">Lorem, ipsum.</h2>
+      <h2 class="pb-2 border-bottom">Student Information</h2>
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+     
+     @for ($i=0; $i<8; $i++)
+       
+
         <div class="col btn">
-          <img src="image/1.JPG" width="100" height="100">
+          <img src="{{ asset('/upload/student/'.$student[$i]->photo )}}" width="100" height="100">
           <div>
-            <h3 class="fw-bold mb-0 fs-4">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, provident totam.</p>
+            <h3 class="fw-bold mb-0 fs-4">name: {{ $student[$i]->name }}</h3>
+              <p>roll: {{$student [$i]->roll}}</p>
+              <p>Technology: {{ $student[$i]->technology }}</p>
+              <p>Semister: {{ $student[$i]->semister }}</p>
+              <p>group: {{ $student[$i]->group }}</p>
+          
           </div>
         </div>
-        <div class="col btn">
+
+        @endfor
+
+
+
+
+
+        {{-- <div class="col btn">
           <img src="image/10.jpg" width="100" height="100">
           <div>
             <h3 class="fw-bold mb-0 fs-4">Lorem, ipsum.</h3>
@@ -273,10 +302,10 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, tempore qui!</p>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
 
-    <!-- ==============================================icon gird here====================================== -->
+    <!-- ==============================================student list gird here====================================== -->
 
 
 

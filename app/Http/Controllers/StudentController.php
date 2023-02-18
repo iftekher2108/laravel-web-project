@@ -80,6 +80,7 @@ class StudentController extends Controller
         $student->shift = $request->shift;
 
         $student->group = $request->group;
+        $student->bio=$request->bio;
        
        
         $student->save();
@@ -139,8 +140,6 @@ class StudentController extends Controller
              'shift'=>'required',
              'group'=>'required',	 	 	 		
 
-
-
             'photo'=>'nullable|mimes:jpg,jpeg,png|max:15512'
         ]);
        
@@ -164,6 +163,7 @@ class StudentController extends Controller
         $student->semister = $request->semister;
        $student->shift=$request->shift;
        $student->group=$request->group;
+       $student->bio=$request->bio;
        
         $student->save();
         return redirect('/studentlist');

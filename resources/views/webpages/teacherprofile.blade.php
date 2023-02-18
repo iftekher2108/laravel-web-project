@@ -22,6 +22,7 @@
           <h5><b>DEPARTMENT : </b> {{ $teacher->department }}</h5>
           <hr>
           <h5><b>SECTION : </b> {{ $teacher->section }}</h5>
+          <h5><b>Bio : </b> {{ $teacher->bio }}</h5>
         </div>
       </div>
     </div>

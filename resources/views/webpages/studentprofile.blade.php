@@ -22,6 +22,7 @@
           <h5><b>SHIFT : </b> {{ $student->shift }}</h5>
           <hr>
           <h5><b>GROUP : </b> {{ $student->group }}</h5>
+          <h5><b>Bio : </b> {{ $student->bio }}</h5>
         </div>
       </div>
     </div>

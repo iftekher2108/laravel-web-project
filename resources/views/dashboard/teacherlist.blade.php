@@ -23,6 +23,7 @@
     <th class="text-center">Gender</th>
     <th class="text-center">Section</th>
     <th class="text-center">Department</th>
+    <th class="text-center">Bio</th>
     </tr>
     </thead>
     <tbody>
@@ -61,6 +62,10 @@
             </td>
             <td class="text-center">
                 <div>{{ $teachers->department }}</div>
+                </td>
+
+                <td class="text-center">
+                    <div>{{ $teachers->bio }}</div>
                 </td>
    
     </tr>

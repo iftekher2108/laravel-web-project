@@ -70,6 +70,10 @@
                         </select>
                         <label for="floatingSelect">departmental subject</label>
                       </div>
+                      <div class="form-floating mb-2">
+                        <textarea class="form-control" name="bio" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">teacher bio data</label>
+                      </div>
                       <div class="d-grid gap-2">
                         <button class="btn btn-success" type="submit">update Data</button>
                       </div>

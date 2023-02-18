@@ -61,6 +61,9 @@
             <td class="text-center">
                 <div>{{ $students->group }}</div>
                 </td>
+                <td class="text-center">
+                    <div>{{ $students->bio }}</div>
+                    </td>
 
     </tr>
     @endforeach

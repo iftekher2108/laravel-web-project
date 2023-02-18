@@ -16,8 +16,13 @@
         <p style="height: 200px; overflow:auto;">
             {{ $blogs->content }}
         </p>
+<div class="group-btn d-flex gap-2 justify-content-center">
+        <button class="btn btn-success "><a class="nav-link" href="{{url('edit-blog',$blogs->id)}}">update blog</a></button>
+   <button class="btn btn-success"><a class="nav-link" href="{{ url('destroyblog',$blogs->id) }}">delete blog</a></button>
     </div>
-    
+</div>
+
 </div>
 @endforeach
+
 @endsection

@@ -21,7 +21,10 @@ class PageController extends Controller
     public function homepage()
     {
         //
-        return view("webpages.index");
+        $student=Student::all();
+        $teacher=Teacher::all();
+        $blog=Blog::all();
+        return view("webpages.index",compact('teacher','student','blog'));
     }
 
 

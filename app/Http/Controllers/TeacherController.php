@@ -78,7 +78,7 @@ class TeacherController extends Controller
         $teacher->gender = $request->gender;
         $teacher->section = $request->section;
         $teacher->department = $request->department;
-
+        $teacher->bio=$request->bio;
         $teacher->save();
         return redirect('/teacherlist');
 
@@ -144,6 +144,7 @@ class TeacherController extends Controller
         $teacher->gender = $request->gender;
         $teacher->section = $request->section;
         $teacher->department = $request->department;
+        $teacher->bio=$request->bio;
 
         $teacher->save();
         return redirect('/teacherlist');
