@@ -8,11 +8,7 @@ use App\Models\Student;
 
 class StudentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
 
      public function __construct()
      {
@@ -21,20 +17,6 @@ class StudentController extends Controller
  
 
 
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function addstudentform()
     {
         return view("webpages.addstudentform");
@@ -57,7 +39,7 @@ class StudentController extends Controller
         ]);
        
        
-        $student = new Student;  //Kpistudent is Model name
+        $student = new Student;  //student is Model name
 
         if(isset($request->photo)){
             $filename = time().'.'.$request->photo->extension();
@@ -92,35 +74,6 @@ class StudentController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
 
 
      public function editstudentform($id) {
@@ -144,7 +97,7 @@ class StudentController extends Controller
         ]);
        
        
-        $student = Student::find($id);  //Kpistudent is Model name
+        $student = Student::find($id);  //student is Model name
 
         if(isset($request->photo)){
             $filename = time().'.'.$request->photo->extension();
@@ -170,12 +123,6 @@ class StudentController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

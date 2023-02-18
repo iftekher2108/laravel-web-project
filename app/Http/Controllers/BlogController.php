@@ -14,25 +14,6 @@ class BlogController extends Controller
     {
         $this->middleware('auth');
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
 
     public function adminblog() 
     {
@@ -55,12 +36,7 @@ class BlogController extends Controller
         $blogs=blog::all();
         return view('dashboard.editblog',compact('blog','blogs'));
     }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreblogRequest  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function storeblog(StoreblogRequest $request)
     {
         //
@@ -97,35 +73,8 @@ class BlogController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\blog  $blog
-     * @return \Illuminate\Http\Response
-     */
-    public function show(blog $blog)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\blog  $blog
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(blog $blog)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateblogRequest  $request
-     * @param  \App\Models\blog  $blog
-     * @return \Illuminate\Http\Response
-     */
     public function updateblog(UpdateblogRequest $request, blog $blog, $id)
     {
         //
@@ -159,12 +108,7 @@ class BlogController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\blog  $blog
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroyblog(blog $blog,$id)
     {
         //

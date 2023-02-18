@@ -8,21 +8,13 @@ use App\Http\Requests\UpdateteacherRequest;
 
 class TeacherController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function __construct()
     {
         $this->middleware('auth');
     }
 
 
-    public function index()
-    {
-        //
-    }
 
     public function addteacher()
     {
@@ -34,22 +26,8 @@ class TeacherController extends Controller
         $teacher = teacher::find($id);
         return view('dashboard.editteacher', compact('teacher'));
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreteacherRequest  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function storeteacher(StoreteacherRequest $request)
     {
         $request->validate([
@@ -82,38 +60,9 @@ class TeacherController extends Controller
         $teacher->save();
         return redirect('/teacherlist');
 
-        //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\teacher  $teacher
-     * @return \Illuminate\Http\Response
-     */
-    public function show(teacher $teacher)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\teacher  $teacher
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(teacher $teacher)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateteacherRequest  $request
-     * @param  \App\Models\teacher  $teacher
-     * @return \Illuminate\Http\Response
-     */
     public function updateteacher(UpdateteacherRequest $request, teacher $teacher,$id)
     {
         //
@@ -151,12 +100,6 @@ class TeacherController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\teacher  $teacher
-     * @return \Illuminate\Http\Response
-     */
     public function destroyteacher(teacher $teacher,$id)
     {
         //
@@ -168,4 +111,6 @@ class TeacherController extends Controller
         return redirect('/teacherlist');
 
     }
+
+
 }
