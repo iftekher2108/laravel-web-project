@@ -314,55 +314,37 @@
     <hr>
     <!-- ==============================================feature title here======================================= -->
     <div class="px-4 py-5 mb-4 rounded-4 m-0" data-aos="zoom-in-right">
-      <h2 class="pb-2 border-bottom">Lorem, ipsum dolor.</h2>
+      <h2 class="pb-2 border-bottom">Latest News</h2>
 
       <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
         <div class="d-flex flex-column align-items-start gap-2">
           <h3 class="fw-bold">Left-aligned front view stylishing feature</h3>
           <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque sit atque voluptatibus consequuntur repudiandae aspernatur temporibus, pariatur autem tempora dicta.</p>
-          <a href="#footer" class="btn btn-success btn-lg">See More</a>
+          <a href="{{ url('blog') }}" class="btn btn-success btn-lg">See More</a>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 g-4" data-aos="zoom-in-right" data-aos-duration="1500">
+        
+
+          @for ($i=0;$i<4;$i++)
+          <a class="nav-link" href="{{ url('blogshow/'.$blog[$i]->id) }}">
           <div class="d-flex flex-column gap-2 btn">
             <div
               class="rounded-3">
-              <img src="image/19.jpg" width="100" height="100">
+              <img src="{{ asset('upload/blog/'.$blog[$i]->photo) }}" width="100" height="100">
 
             </div>
-            <h4 class="fw-semibold mb-0">Lorem, ipsum.</h4>
+            <h4 class="fw-semibold mb-0">{{ $blog[$i]->title }}</h4>
+            <small>date: {{ $blog[$i]->created_at }}</small>
             <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, saepe consectetur.</p>
           </div>
+        </a>
+          @endfor
 
-          <div class="d-flex flex-column gap-2 btn">
-            <div
-              class="rounded-3">
-              <img src="image/10.jpg" width="100" height="100">
 
-            </div>
-            <h4 class="fw-semibold mb-0">Lorem, ipsum.</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, beatae asperiores?</p>
-          </div>
-
-          <div class="d-flex flex-column gap-2 btn">
-            <div
-              class="rounded-3">
-              <img src="image/13.jpg" width="100" height="100">
-
-            </div>
-            <h4 class="fw-semibold mb-0">Lorem, ipsum.</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, harum nisi!</p>
-          </div>
-
-          <div class="d-flex flex-column gap-2 btn">
-            <div class="rounded-3">
-              <img src="image/17.jpg" width="100" height="100">
-
-            </div>
-            <h4 class="fw-semibold mb-0">Lorem, ipsum.</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, repellat id?</p>
-          </div>
         </div>
       </div>
+
+
     </div>
     <!-- ===========================================feature title here========================================== -->
     <hr>

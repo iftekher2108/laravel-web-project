@@ -80,28 +80,18 @@
                 </div>
   
                 <div class="col-6 col-md-2 mb-3">
-                  <h5>Business Development</h5>
+                  <h5>Quick Link</h5>
                   <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cloud System</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">System Security</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">DynamicRedirection</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Power Platform</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Industry Works</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gallery</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Private Policy</a></li>
                   </ul>
                 </div>
+
   
-                <div class="col-6 col-md-2 mb-3">
-                  <h5>Companies Services</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">career Development</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Device For Education</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Company Job news</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li> -->
-                  </ul>
-                </div>
-  
-                <div class="col-md-5 offset-md-1 mb-3">
+                <div class="col-md-5 offset-md-1 mb-3 ms-auto me-0">
                   <form>
                     <h5>Subscribe to our Website </h5>
                     <p>Weekly digest of what's new and exciting news from us.</p>

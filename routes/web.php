@@ -44,13 +44,13 @@ use Illuminate\Support\Facades\Route;
 // pages route link start here 
 Route::get('/',[PageController::class,'homepage']);
 Route::get('/gellery',[PageController::class,'gellery']);
-Route::get('/blog',[PageController::class,'blog']);
+Route::get('/blogshow/{id}',[PageController::class,'blogshow']);
 Route::get('/about',[PageController::class,'about']);
 Route::get('/policy',[PageController::class,'policy']);
 Route::get('/table',[PageController::class,'table']);
 Route::get('/studentprofile/{id}',[PageController::class,'studentprofile']);
 Route::get('/teacher-profile/{id}', [PageController::class, 'teacherprofile']);
-
+Route::get('blog',[PageController::class,'blog']);
 
 
 
