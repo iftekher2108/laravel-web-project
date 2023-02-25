@@ -114,3 +114,11 @@
     outline: 0px !important;
     border: none !important;
   }
+
+
+  .sidebar-menu a{
+    color:white !important;
+  }
+  .sidebar-menu a:hover {
+ background: #16b485 !important;
+  }

@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="{{asset('custom/style.css')}}">
   <link href="{{asset ('css/bootstrap.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <!-- swiper js -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- swiper js -->
+ 
+ 
   <!-- aos entry animation libary -->
   <link rel="stylesheet" href="{{asset('aos/aos.css') }}" />
   <!-- aos entry animation libary -->
@@ -148,6 +156,39 @@
     <script src="{{ asset ('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('popper/popper.min.js') }}"></script>
     <script src="{{ asset("custom/main.js") }}"></script>
+    
+    
+    <!-- swiper js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+        <script>
+          var swiper = new Swiper(".studentSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+        </script>
+<!-- swiper js scripts -->
+
+
+
+    
+    
+    <!-- aos scripts -->
     <script src="{{ asset ('aos/aos.js') }}"></script>
     <script>
       AOS.init({
@@ -158,6 +199,7 @@
   
       });
     </script>
+    <!-- aos scripts -->
   
   </body>
   

@@ -94,65 +94,36 @@
     <!-- ==============================================trainer and mentor colomn with icon here================================== -->
     <div class="px-4 py-5 rounded-4 m-0" id="featured-3" data-aos="zoom-in-right">
       <h2 class="pb-2 border-bottom">Teacher, Mentor and Trainer</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            @for ($i=0;$i<count($teacher);$i++)
+            <div class="swiper-slide">
+              <div class="feature col" data-aos="zoom-in-right" data-aos-duration="1500">
+                <div
+                  class=" overflow-hidden">
+                  <img src="{{ asset('upload/teacher/'.$teacher[$i]->photo) }}" class="vstack mx-auto" alt="image" width="250" height="200">
+                </div>
+                <h3 class="fs-2">{{ $teacher[$i]->name }}</h3>
+                <h5>ID NO: {{ $teacher[$i]->department }}</h5>
+                <h5>Department: {{ $teacher[$i]->department }}</h5>
+                <p>Email: {{ $teacher[$i]->email }}</p>
+                <p>Home Address: {{ $teacher[$i]->address }}</p>
+                <p>{{ $teacher[$i]->email }}</p>
+                <a href="#" class="btn btn-success">
+                  contact with us
+                </a>
+              </div>
+            </div>
+            @endfor
+          </div>
+          <br>
+          <br>
+          <div class="swiper-pagination"></div>
         
         
-        @for ($i=0;$i<3;$i++)
-          
-
-        <div class="feature col" data-aos="zoom-in-right" data-aos-duration="1500">
-          <div
-            class="d-inline-flex align-items-center justify-content-center rounded text-bg-success bg-gradient fs-2 mb-3 overflow-hidden">
-            <img src="{{ asset('upload/teacher/'.$teacher[$i]->photo) }}" alt="image" width="250" height="200">
-          </div>
-          <h3 class="fs-2">{{ $teacher[$i]->name }}</h3>
-          <h5>ID NO: {{ $teacher[$i]->department }}</h5>
-          <h5>Department: {{ $teacher[$i]->department }}</h5>
-          <p>Email: {{ $teacher[$i]->email }}</p>
-          <p>Home Address: {{ $teacher[$i]->address }}</p>
-          <p>{{ $teacher[$i]->email }}</p>
-          <a href="#" class="btn btn-success">
-            contact with us
-          </a>
-        </div>
-        @endfor
-
-
-
-
-        {{-- <div class="feature col" data-aos="zoom-in-right" data-aos-duration="1300">
-          <div
-            class="d-inline-flex align-items-center justify-content-center rounded text-bg-success bg-gradient fs-2 mb-3 overflow-hidden">
-            <img src="image/5.jpg" alt="image" width="250" height="200">
-          </div>
-          <h3 class="fs-2">Iftekher Mahmud Pervez</h3>
-          <h5>PHP and Laravel Developer</h5>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus at sed commodi enim voluptatem
-            iusto quam similique illo soluta ea!</p>
-          <a href="#" class="btn btn-success">
-            contact with us
-          </a>
-        </div>
-        <div class="feature col" data-aos="zoom-in-right">
-          <div
-            class="d-inline-flex align-items-center justify-content-center rounded text-bg-success bg-gradient fs-2 mb-3 overflow-hidden">
-            <img src="image/1.jpg" alt="image" width="250" height="200">
-          </div>
-          <h3 class="fs-2">Iftekher Mahmud Pervez</h3>
-          <h5>Javascript Programming Expert</h5>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, quidem eius! Ducimus nisi illum saepe,
-            eveniet cum numquam sint quaerat.</p>
-          <a href="#" class="btn btn-success">
-            contact with us
-          </a>
-        </div>
-      </div> --}}
-
-
     </div>
 
     <!-- ================================================trainer and mentor colomn with icon here================================== -->
-
 
 
 
@@ -224,99 +195,48 @@
     <div class="px-4 py-5 rounded-4 m-0" id="icon-grid" data-aos="zoom-in">
       <h2 class="pb-2 border-bottom">Student Information</h2>
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-     
-     @for ($i=0; $i<8; $i++)
-       
+        <div class="swiper studentSwiper">
+          <div class="swiper-wrapper">
 
-        <div class="col btn">
-          <img src="{{ asset('/upload/student/'.$student[$i]->photo )}}" width="100" height="100">
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">name: {{ $student[$i]->name }}</h3>
-              <p>roll: {{$student [$i]->roll}}</p>
-              <p>Technology: {{ $student[$i]->technology }}</p>
-              <p>Semister: {{ $student[$i]->semister }}</p>
-              <p>group: {{ $student[$i]->group }}</p>
-          
-          </div>
-        </div>
+            @for ($i=0; $i<count($student); $i++)
 
-        @endfor
-
+            <div class="swiper-slide">
+            <div class="col btn overflow-hidden">
+              <img src="{{ asset('/upload/student/'.$student[$i]->photo )}}" width="100" height="100">
+              <div>
+                <h3 class="fw-bold mb-0 fs-4">name: {{ $student[$i]->name }}</h3>
+                  <p>roll: {{$student [$i]->roll}}</p>
+                  <p>Technology: {{ $student[$i]->technology }}</p>
+                  <p>Semister: {{ $student[$i]->semister }}</p>
+                  <p>group: {{ $student[$i]->group }}</p>
+              
+              </div>
+            </div>
 
 
 
 
-        {{-- <div class="col btn">
-          <img src="image/10.jpg" width="100" height="100">
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, similique voluptates.</p>
+            </div>
+
+    
+            @endfor
+
           </div>
-        </div>
-        <div class="col btn">
-          <img src="image/11.jpg" width="100" height="100">
-            
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, sit dolorem!</p>
-          </div>
-        </div>
-        <div class="col btn">
-          <img src="image/12.jpg" width="100" height="100">
-            
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, beatae inventore!</p>
-          </div>
-        </div>
-        <div class="col btn">
-          <img src="image/14.jpg" width="100" height="100">
-            
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, magni excepturi!</p>
-          </div>
-        </div>
-        <div class="col btn">
-          <img src="image/15.jpg" width="100" height="100">
-            
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, amet doloribus.</p>
-          </div>
-        </div>
-        <div class="col btn">
-          <img src="image/18.jpg" width="100" height="100">
-            
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, earum rerum!</p>
-          </div>
-        </div>
-        <div class="col btn">
-          <img src="image/19.jpg" width="100" height="100">
-            
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, tempore qui!</p>
-          </div>
-        </div>
-      </div> --}}
+          <br>
+          <br>
+          <div class="swiper-pagination"></div>
     </div>
 
     <!-- ==============================================student list gird here====================================== -->
 
 
 
-
-
     <hr>
     <!-- ==============================================feature title here======================================= -->
-    <div class="px-4 py-5 mb-4 rounded-4 m-0" data-aos="zoom-in-right">
+    <div class="px-4 py-5 mb-4 rounded-4 m-0 overflow-hidden" >
       <h2 class="pb-2 border-bottom">Latest News</h2>
 
-      <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+      <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5" data-aos="zoom-in-right">
         <div class="d-flex flex-column align-items-start gap-2">
           <h3 class="fw-bold">Left-aligned front view stylishing feature</h3>
           <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque sit atque voluptatibus consequuntur repudiandae aspernatur temporibus, pariatur autem tempora dicta.</p>

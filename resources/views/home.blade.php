@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-3 col-sm-12">
-                <div class="card sticky-top navbar-expand-md" style="height:100vh;">
-                    <div class="card-header">{{ __('Dashboard Menu') }}</div>
+                <div class="card sticky-top navbar-expand-md bg-dark text-white" style="height:100vh;">
+                    <div class="card-header bg-dark text-white">{{ __('Dashboard Menu') }}</div>
                         <button class="navbar navbar-toggler btn btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#SupportedContent" aria-controls="SupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                             <span class="navbar-toggler-icon m-auto"></span>
                         </button>
