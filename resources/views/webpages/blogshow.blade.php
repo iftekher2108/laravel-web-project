@@ -266,6 +266,9 @@
                                 publication, writers, content, or something else entirely. Totally up to you.</p>
                         </div>
 
+
+
+{{-- 
                         <div class="p-4 bg-light">
                             <h4 class="fst-italic">Archives</h4>
                             <ol class="list-unstyled mb-0">
@@ -282,14 +285,14 @@
                                 <li><a href="#">May 2020</a></li>
                                 <li><a href="#">April 2020</a></li>
                             </ol>
-                        </div>
+                        </div> --}}
 
                         <div class="p-4 bg-light">
                             <h4 class="fst-italic">Elsewhere</h4>
                             <ol class="list-unstyled">
-                                <li><a href="#">GitHub</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#" class="btn">GitHub</a></li>
+                                <li><a href="#" class="btn">Twitter</a></li>
+                                <li><a href="#" class="btn">Facebook</a></li>
                             </ol>
                         </div>
                     </div>

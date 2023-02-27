@@ -76,25 +76,23 @@
             <!-- <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3> -->
             <footer class="py-5">
               <div class="row">
-                <div class="col-6 col-md-2 mb-3">
-                  <h5>Developer & IT</h5>
+                <div class="col-lg-5 col-md-2 mb-3">
+                  <h5>Quick Contact</h5>
                   <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Web app dev</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Javascript dev</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">C# dev</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Android dev</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">desktop app dev</a></li>
+                    <li class="nav-item mb-2"><a href="javascript:void(0)" class="nav-link p-0 text-muted">Email: iftekhermahmud@gmail.com</a></li>
+                    <li class="nav-item mb-2"><a href="javascript:void(0)" class="nav-link p-0 text-muted">Phone: (+880 17**-****</a></li>
+                    <li class="nav-item mb-2"><a href="javascript:void(0)" class="nav-link p-0 text-muted">Address: Bheramara, Kushtia</a></li>
                   </ul>
                 </div>
   
-                <div class="col-6 col-md-2 mb-3">
+                <div class="col-lg-2 col-md-2 mb-3">
                   <h5>Quick Link</h5>
                   <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gallery</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Private Policy</a></li>
+                    <li class="nav-item mb-2"><a href="{{ url('/') }}" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="{{ url('gellery') }}" class="nav-link p-0 text-muted">Gallery</a></li>
+                    <li class="nav-item mb-2"><a href="{{ url('blog') }}" class="nav-link p-0 text-muted">Blog</a></li>
+                    <li class="nav-item mb-2"><a href="{{ url('about') }}" class="nav-link p-0 text-muted">About Us</a></li>
+                    <li class="nav-item mb-2"><a href="{{ url('policy') }}" class="nav-link p-0 text-muted">Private Policy</a></li>
                   </ul>
                 </div>
 
@@ -106,14 +104,14 @@
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                       <label for="newsletter1" class="visually-hidden">Email address</label>
                       <input id="newsletter1" type="text" class="form-control" placeholder="Enter Your Email Address">
-                      <button class="btn btn-success" type="button">Subscribe</button>
+                      <button class="btn btn-success px-4" type="button">Subscribe</button>
                     </div>
                   </form>
                 </div>
               </div>
   
               <div class="d-flex flex-column flex-sm-row justify-content-between py-2 my-2 border-top">
-                <p class="m-auto">&copy; 2022 SK Group LTD, Inc. All rights reserved.</p>
+                <p class="m-auto">&copy; 2022 Iftekher Mahmud, Inc. All rights reserved.</p>
                 <ul class="list-unstyled d-flex">
                   <li class="ms-3"><a class="link-light" title="Twitter" href="https://twitter.com/"><svg xmlns="http://www.w3.org/2000/svg"
                         width="25" height="25" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">

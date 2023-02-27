@@ -1,94 +1,39 @@
 @extends('webpages.master')
-    <!-- ====================================home front section here============================= -->
 @section('content')
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="zoom-in">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="image/10.jpg" width="100%" height="100%">
+    <!-- ====================================home front section here============================= -->
 
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>IFTEKHER MAHMUD PERVEZ</h1>
-              <p>Some representative placeholder content for the first slide.</p>
-              <p><a class="btn btn-success text-bg-white" href="#icon-grid">Explore More</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="image/3.jpg" width="100%" height="100%">
+<div class="home-hero p-5">
+<div class="row">
+  <div class="col-sm-12 col-lg-6 py-5 my-5">
+    <h1 class="fw-bolder text-capitalize">this is the title</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, aperiam!</p>
 
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>IFTEKHER MAHMUD PERVEZ</h1>
-              <p>There is many programming highly qualified course enroll now.</p>
-              <p><a class="btn btn-success" href="#hanging-icons">Learn More</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="image/6.jpg" width="100%" height="100%">
-
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>IFTEKHER MAHMUD PERVEZ</h1>
-              <p>Some representative placeholder content for the third slide.</p>
-              <p><a class="btn btn-success" href="gellery.html">Browse Gallery</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="image/9.jpg" width="100%" height="100%">
-
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>IFTEKHER MAHMUD PERVEZ</h1>
-              <p>Some representative placeholder content for the forth slide.</p>
-              <p><a class="btn btn-success" href="gellery.html">view content</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="image/11.jpg" width="100%" height="100%">
-
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>IFTEKHER MAHMUD PERVEZ</h1>
-              <p>Some representative placeholder content for the fifth slide.</p>
-              <p><a class="btn btn-success" href="gellery.html">See Our Mentor</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="image/13.jpg" width="100%" height="100%">
-
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>IFTEKHER MAHMUD PERVEZ</h1>
-              <p>Some representative placeholder content for the sixth slide.</p>
-              <p><a class="btn btn-success" href="gellery.html">See Our Services</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    <div class="btn-group hstack gap-3">
+      <button class="btn btn-outline-success border border-1 border-success">Learn More</button>
+      <button class="btn btn-outline-success border border-1 border-success">View More</button>
     </div>
+  </div>
+
+
+  <div class="col-sm-12 col-lg-6">
+    <img src="{{ asset('image/home-hero.jpg') }}" class="img-fluid" alt="hero-image">
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
     <!-- ============================================home front section here=================================== -->
     <hr>
     <!-- ==============================================trainer and mentor colomn with icon here================================== -->
@@ -98,18 +43,18 @@
           <div class="swiper-wrapper">
             @for ($i=0;$i<count($teacher);$i++)
             <div class="swiper-slide">
-              <div class="feature col" data-aos="zoom-in-right" data-aos-duration="1500">
+              <div class="feature btn" data-aos="zoom-in-right" data-aos-duration="1500">
                 <div
-                  class=" overflow-hidden">
-                  <img src="{{ asset('upload/teacher/'.$teacher[$i]->photo) }}" class="vstack mx-auto" alt="image" width="250" height="200">
+                  class="overflow-hidden">
+                  <img src="{{ asset('upload/teacher/'.$teacher[$i]->photo) }}" class="vstack mx-auto rounded" alt="image" width="250" height="200">
                 </div>
                 <h3 class="fs-2">{{ $teacher[$i]->name }}</h3>
-                <h5>ID NO: {{ $teacher[$i]->department }}</h5>
-                <h5>Department: {{ $teacher[$i]->department }}</h5>
-                <p>Email: {{ $teacher[$i]->email }}</p>
-                <p>Home Address: {{ $teacher[$i]->address }}</p>
-                <p>{{ $teacher[$i]->email }}</p>
-                <a href="#" class="btn btn-success">
+                <h5 class="m-0 p-0">ID NO: {{ $teacher[$i]->id }}</h5>
+                <h5 class="m-0 p-0">Department: {{ $teacher[$i]->department }}</h5>
+                <p class="m-0 p-0">Email: {{ $teacher[$i]->email }}</p>
+                <p class="m-0 p-0">Home Address: {{ $teacher[$i]->address }}</p>
+                <p class="m-0 p-0">{{ $teacher[$i]->email }}</p>
+                <a href="tel:{{ $teacher[$i]->number }}" class="btn btn-success">
                   contact with us
                 </a>
               </div>
@@ -201,14 +146,14 @@
             @for ($i=0; $i<count($student); $i++)
 
             <div class="swiper-slide">
-            <div class="col btn overflow-hidden">
-              <img src="{{ asset('/upload/student/'.$student[$i]->photo )}}" width="100" height="100">
+            <div class="overflow-hidden">
+              <img src="{{ asset('/upload/student/'.$student[$i]->photo )}}" class="rounded" width="100" height="100">
               <div>
                 <h3 class="fw-bold mb-0 fs-4">name: {{ $student[$i]->name }}</h3>
-                  <p>roll: {{$student [$i]->roll}}</p>
-                  <p>Technology: {{ $student[$i]->technology }}</p>
-                  <p>Semister: {{ $student[$i]->semister }}</p>
-                  <p>group: {{ $student[$i]->group }}</p>
+                  <p class="m-0 p-0">roll: {{$student [$i]->roll}}</p>
+                  <p class="m-0 p-0">Technology: {{ $student[$i]->technology }}</p>
+                  <p class="m-0 p-0">Semister: {{ $student[$i]->semister }}</p>
+                  <p class="m-0 p-0">group: {{ $student[$i]->group }}</p>
               
               </div>
             </div>
@@ -250,7 +195,7 @@
           <div class="d-flex flex-column gap-2 btn">
             <div
               class="rounded-3">
-              <img src="{{ asset('upload/blog/'.$blog[$i]->photo) }}" width="100" height="100">
+              <img src="{{ asset('upload/blog/'.$blog[$i]->photo) }}" class="rounded" width="100" height="100">
 
             </div>
             <h4 class="fw-semibold mb-0">{{ $blog[$i]->title }}</h4>
