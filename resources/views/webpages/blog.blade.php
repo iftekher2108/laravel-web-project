@@ -4,9 +4,23 @@
 
 <div class="container">
     <div class="nav-scroller py-1 mb-2">
-        <nav class="nav d-flex justify-content-between">
-            <a class="p-2 link-secondary" href="#">World</a>
-            <a class="p-2 link-secondary" href="#">U.S.</a>
+        <nav class="nav d-flex justify-content-evenly">
+
+
+
+            @foreach ($blog as $blogs)
+            <a class="link-secondary nav-link fw-bold btn" href="#">{{ $blogs->category }}</a>
+                
+            @endforeach
+
+
+
+
+
+
+
+
+            {{-- <a class="p-2 link-secondary" href="#">U.S.</a>
             <a class="p-2 link-secondary" href="#">Technology</a>
             <a class="p-2 link-secondary" href="#">Design</a>
             <a class="p-2 link-secondary" href="#">Culture</a>
@@ -16,7 +30,7 @@
             <a class="p-2 link-secondary" href="#">Science</a>
             <a class="p-2 link-secondary" href="#">Health</a>
             <a class="p-2 link-secondary" href="#">Style</a>
-            <a class="p-2 link-secondary" href="#">Travel</a>
+            <a class="p-2 link-secondary" href="#">Travel</a> --}}
         </nav>
     </div>
 </div>
@@ -83,14 +97,18 @@
             </h3>
             @foreach ($blog as $blogs )
              <a class="nav-link" href="#">   
-            <article class="blog-post mb-2 p-3 rounded-3" style="background:rgb(233, 233, 255)">
-                <div class="blog-items">
+            <article class="blog-post row mb-2 p-3  rounded-3 m-0" style="background:rgba(96, 211, 173,0.7)">
+                <div class="blog-items col-7">
                     <h2 class="text-capitalize">{{ $blogs->title }}</h3>
                     <small><span class="fw-bold">Date: </span>{{ $blogs->created_at }} | {{ Auth::user()->name }}</small>
                     <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, cumque.</p>
+                   <br>
+                    <a href="javascript:void(0)" class="nav-link text-success">Read More...</a>
                
                 </div>
-                <a href="javascript:void(0)" class="nav-link text-success">Read More...</a>
+                <div class="col-5 p-1">
+                    <img src="{{asset('upload/blog/'.$blogs->photo)  }}" class="img-fluid rounded" alt="blog-feature-images">
+                </div>
             </article>
             </a>
             @endforeach

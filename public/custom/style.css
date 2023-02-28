@@ -20,18 +20,43 @@ html {
 
 
 .home-hero {
-  background: linear-gradient(to bottom,#16b485,transparent);
   background-repeat: no-repeat !important;
   height: 100vh;
-  background-position: center;
-  background-size: cover;
+  width: 100% !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-attachment: scroll !important;
+  color: white;
+}
+
+.home-hero h1 {
+
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: type 5s ease-in-out infinite alternate;
+}
+
+@keyframes type {
+  0% {
+width: 0ch;
+  }
+  100% {
+width: 24ch;
+  }
 }
 
 
 
-
-
 /* hero font page design */
+
+
+
+
+
+
+
+
 
 
 
@@ -333,3 +358,19 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 
 /* scrolling bar customized */
+
+
+/* blog post style is here */
+
+
+article.blog-post img{
+  height:200px !important;
+  width: 250px !important;
+/* aspect-ratio: 1/1 !important; */
+}
+
+
+
+
+/* blog post style is here */
+

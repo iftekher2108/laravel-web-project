@@ -3,21 +3,17 @@
 
     <!-- ====================================home front section here============================= -->
 
-<div class="home-hero p-5">
-<div class="row">
-  <div class="col-sm-12 col-lg-6 py-5 my-5">
-    <h1 class="fw-bolder text-capitalize">this is the title</h1>
+
+  <div class="home-hero" style=" background: linear-gradient(145deg,#16b485 5%,transparent 40%,transparent 45%),url({{ asset('image/home-background.jpeg') }});">
+<div class="row m-0 px-1 d-flex flex-column justify-content-center align-items-center">
+  <div class="col-lg-6 col-sm-12  py-5 my-5 mx-0">
+    <h1 class="fw-bolder text-capitalize">Funroom Homework Tutoring</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, aperiam!</p>
 
     <div class="btn-group hstack gap-3">
       <button class="btn btn-outline-success border border-1 border-success">Learn More</button>
       <button class="btn btn-outline-success border border-1 border-success">View More</button>
     </div>
-  </div>
-
-
-  <div class="col-sm-12 col-lg-6">
-    <img src="{{ asset('image/home-hero.jpg') }}" class="img-fluid" alt="hero-image">
   </div>
 
 </div>
@@ -35,7 +31,6 @@
 
 
     <!-- ============================================home front section here=================================== -->
-    <hr>
     <!-- ==============================================trainer and mentor colomn with icon here================================== -->
     <div class="px-4 py-5 rounded-4 m-0" id="featured-3" data-aos="zoom-in-right">
       <h2 class="pb-2 border-bottom">Teacher, Mentor and Trainer</h2>
@@ -48,12 +43,12 @@
                   class="overflow-hidden">
                   <img src="{{ asset('upload/teacher/'.$teacher[$i]->photo) }}" class="vstack mx-auto rounded" alt="image" width="250" height="200">
                 </div>
-                <h3 class="fs-2">{{ $teacher[$i]->name }}</h3>
-                <h5 class="m-0 p-0">ID NO: {{ $teacher[$i]->id }}</h5>
-                <h5 class="m-0 p-0">Department: {{ $teacher[$i]->department }}</h5>
-                <p class="m-0 p-0">Email: {{ $teacher[$i]->email }}</p>
-                <p class="m-0 p-0">Home Address: {{ $teacher[$i]->address }}</p>
-                <p class="m-0 p-0">{{ $teacher[$i]->email }}</p>
+                <h3 class="fs-2 text-start">{{ $teacher[$i]->name }}</h3>
+                <h5 class="m-0 p-0 text-start">ID NO: {{ $teacher[$i]->id }}</h5>
+                <h5 class="m-0 p-0 text-start">Department: {{ $teacher[$i]->department }}</h5>
+                <p class="m-0 p-0 text-start">Email: {{ $teacher[$i]->email }}</p>
+                <p class="m-0 p-0 text-start">Home Address: {{ $teacher[$i]->address }}</p>
+                <p class="m-0 p-0 text-start">{{ $teacher[$i]->email }}</p>
                 <a href="tel:{{ $teacher[$i]->number }}" class="btn btn-success">
                   contact with us
                 </a>
@@ -191,8 +186,9 @@
         
 
           @for ($i=0;$i<4;$i++)
-          <a class="nav-link" href="{{ url('blogshow/'.$blog[$i]->id) }}">
           <div class="d-flex flex-column gap-2 btn">
+            <a class="nav-link" href="{{ url('blogshow/'.$blog[$i]->id) }}">
+
             <div
               class="rounded-3">
               <img src="{{ asset('upload/blog/'.$blog[$i]->photo) }}" class="rounded" width="100" height="100">
@@ -201,8 +197,10 @@
             <h4 class="fw-semibold mb-0">{{ $blog[$i]->title }}</h4>
             <small>date: {{ $blog[$i]->created_at }}</small>
             <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, saepe consectetur.</p>
-          </div>
-        </a>
+         <a href="javascript:void(0)" class="nav-link text-success">Read More...</a>
+           </a>
+        </div>
+      
           @endfor
 
 
