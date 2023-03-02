@@ -79,14 +79,14 @@
         <!-- ===========================================form design start is here==================================== -->
         <div class="d-lg-flex align-items-center justify-content-around py-3 overflow-hidden" data-aos="zoom-in">
             <div>
-                <img src="image/webform.png" class="img-fluid" alt="banner" height="400" width="400">
+                <img src="image/webform.png" class="img-fluid preview p-2" alt="banner" height="400" width="400">
             </div>
             <div class="form-menu">
                 <form action="{{url('store') }}" method="POST" enctype="multipart/form-data">
                   @csrf
                   <div class="mb-3">
                     <label for="formFile" class="form-label">Enter Your Photo</label>
-                    <input class="form-control" name="photo" type="file" id="formFile">
+                    <input class="form-control" name="photo" id="upimg" type="file">
                   </div>
                     <div class="form-floating mb-2">
                         <input type="text" name="roll" class="form-control form-control-sm" id="floatingInput" placeholder="name@example.com">

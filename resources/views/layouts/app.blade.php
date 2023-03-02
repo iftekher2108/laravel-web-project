@@ -118,7 +118,7 @@
 
 
 
-    
+<script src="{{ asset('custom/dash.js') }}"></script>
 <script src="{{ asset('custom/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ asset('custom/script.js') }}"></script>

@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="d-flex flex-column flex-sm-row justify-content-between py-2 my-2 border-top">
-                    <p class="m-auto">&copy; 2022 Iftekher Mahmud, Inc. All rights reserved.</p>
+                    <p class="m-auto">&copy; <span class="date">2022</span> Iftekher Mahmud, Inc. All rights reserved.</p>
                     <ul class="list-unstyled d-flex">
                         <li class="ms-3"><a class="link-light" title="Twitter" href="https://twitter.com/"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="25" height="25"
