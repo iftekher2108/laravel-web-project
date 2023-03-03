@@ -52,12 +52,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('about') }}">About us</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ url('policy') }}">Private policy</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('table') }}">Informatiom</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>

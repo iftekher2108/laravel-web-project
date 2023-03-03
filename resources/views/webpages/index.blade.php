@@ -33,7 +33,7 @@
     <!-- ============================================home front section here=================================== -->
     <!-- ==============================================trainer and mentor colomn with icon here================================== -->
     <div class="px-4 py-5 rounded-4 m-0" id="featured-3" data-aos="zoom-in-right">
-      <h2 class="pb-2 border-bottom">Teacher, Mentor and Trainer</h2>
+      <h2 class="pb-2 border-bottom">Teacher and Trainer List</h2>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             @for ($i=0;$i<count($teacher);$i++)
@@ -70,70 +70,11 @@
 
 
 
-    <!-- ============================================hanging courses icon here======================================= -->
-    <hr>
-    <div class="px-4 py-5 rounded-4 m-0" id="hanging-icons" data-aos="zoom-in-left">
-      <h2 class="pb-2 border-bottom">Our Courses</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="col d-flex align-items-start km" data-aos="zoom-in-left">
-          <div
-            class="icon-square d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-            <img src="image/Python.png" width="50" height="50">
-          </div>
-          <div>
-            <h3 class="fs-2">Python Programming Language</h3>
-            <p>Whether you're new to programming or an experienced developer, it's easy to learn and use Python.Python
-              is a programming language that lets you work quickly
-              and integrate systems more effectively.</p>
-            <p><del> 15,000 TK</del> 12,000 TK</p>
-            <a href="#" class="btn btn-success">
-              Enroll Now
-            </a>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start km" data-aos="zoom-in-left" data-aos-duration="1300">
-          <div
-            class="icon-square d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-            <img src="image/laravel.png" width="50" height="50">
-          </div>
-          <div>
-            <h3 class="fs-2">PHP and Laravel Development</h3>
-            <p>A popular general-purpose scripting language that is especially suited to web development.
-              Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the
-              world.A good place to start is by skimming through the ever-growing list.</p>
-            <p><del> 15,000 TK</del> 12,000 TK</p>
-            <a href="#" class="btn btn-success">
-              Enroll Now
-            </a>
-          </div>
-        </div>
-        <div class="col d-flex align-items-start km" data-aos="zoom-in-left" data-aos-duration="1500">
-          <div
-            class="icon-square d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-            <img src="image/javascript-logo.png" width="70" height="50">
-          </div>
-          <div>
-            <h3 class="fs-2">Javascript Programming Language</h3>
-            <p>JavaScript (JS) is a lightweight, interpreted with first-class functions. While it is most well-known as
-              the scripting language for Web pages, many non-browser environments also use it, such as Node.js.
-              JavaScript is a prototype-based,dynamic language</p>
-            <p><del> 15,000 TK</del> 12,000 TK</p>
-            <a href="#" class="btn btn-success">
-              Enroll Now
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ========================================hanging courses icon here====================================== -->
-
-
-
 
     <!-- ================================================student list gird here===================================== -->
     <hr>
     <div class="px-4 py-5 rounded-4 m-0" id="icon-grid" data-aos="zoom-in">
-      <h2 class="pb-2 border-bottom">Student Information</h2>
+      <h2 class="pb-2 border-bottom">Student List</h2>
 
         <div class="swiper studentSwiper">
           <div class="swiper-wrapper">

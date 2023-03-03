@@ -42,7 +42,7 @@ class PageController extends Controller
 
 
     public function blogshow($id)
-    {
+    { 
         $blog = blog::find($id);
         return view("webpages.blogshow",compact('blog'));
     }
